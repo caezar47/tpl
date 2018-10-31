@@ -2,12 +2,14 @@
 $(function() { 
 	var header = $('[data-slider-slick="slick-header"]');	
 	var gallery = $('[data-slider-slick="slick-gallery"]');	
-	var CMS__TPL_PATH = '/local/templates/azbn7theme';  
+	var CMS__TPL_PATH = '/wp-content/themes/azbn7theme';  
 	//var CMS__TPL_PATH = '/esbvolga';  
 	var CMS__TPL_PATH = '';  
 	//local
 	var prevArrow = '<button type="button" class="btn-nav__item  is--prev  slick-prev"><span class="sr-only">Предыдущий слайд</span><svg class="icon-svg icon-icon-prev" role="img"><use xlink:href="'+ CMS__TPL_PATH +'/img/svg/sprite.svg#icon-prev"></use></svg></button>';
 	var nextArrow = '<button type="button" class="btn-nav__item  is--next  slick-next"><span class="sr-only">Следующий слайд</span><svg class="icon-svg icon-icon-next" role="img"><use xlink:href="'+ CMS__TPL_PATH +'/img/svg/sprite.svg#icon-next"></use></svg></button>';	
+	
+	$('.slick-cloned .content-block__preview').removeAttr('data-fancybox');
 	
 	/*header.slick({
 		slidesToShow: 1,

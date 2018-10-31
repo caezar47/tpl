@@ -24,10 +24,10 @@
 	<body> 
 		<nav class="navbar__block  is--scroll">
 	<div class="navbar__inner">
-		<div class="container navbar__container">
-			<div class="navbar__header">
-				<div class="row navbar__row-header ">
-					<div class="cols navbar__cols-header  is--hamburger">
+		<div class="navbar__header">
+			<div class="navbar__container container  is--header">
+				<div class="navbar__header-row row ">
+					<div class="navbar__header-cols cols  is--hamburger">
 						<div class="navbar__hamburger">
 							<button class="navbar__hamburger-card" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
 								<span class="navbar__hamburger-card-inner">
@@ -38,28 +38,33 @@
 							</button>
 						</div>
 					</div>
-					<div class="cols navbar__cols-header  is--brand">
-						<a class="navbar__brand  {{navbar_scrollto}}" href="/">
-							<img src="/img/svg/logotip.svg" alt="">
+					<div class="navbar__header-cols cols  is--brand">
+						<a class="navbar__brand" href="/">
+							<svg class="icon-svg icon-logotip" role="img">
+	<use xlink:href="/img/svg/sprite.svg#logotip"></use>
+</svg>
 						</a>
 					</div>
-					<div class="cols navbar__cols-header  is--tel">
+					<div class="navbar__header-cols cols  is--tel">
 						<a href="tel:+74959910430" class="navbar__tel  is--icon"><svg class="icon-svg icon-contacts-tel" role="img">
 	<use xlink:href="/img/svg/sprite.svg#contacts-tel"></use>
 </svg></a>
 					</div>
 				</div>
 			</div>
-				
-			<div class="navbar__collapse" >
+		</div>
+		<div class="navbar__collapse" >
+			<div class="navbar__container  container  is--collapse">
 				<div class="navbar__collapse-inner">	
 					<div class="row navbar__collapse-row">
-						<div class="cols navbar__collapse-cols cols  is--left">
+						<div class="navbar__collapse-cols cols  is--left">
 							<a class="navbar__brand" href="/">
-								<img src="/img/svg/logotip.svg" alt="">
+								<svg class="icon-svg icon-logotip" role="img">
+	<use xlink:href="/img/svg/sprite.svg#logotip"></use>
+</svg>
 							</a> 
 						</div>
-						<div class="cols navbar__collapse-cols cols  is--center">
+						<div class="navbar__collapse-cols cols  is--center">
 							<ul class="navbar__nav">
 								<li class="navbar__nav-item  is--index">
 	<a href="/" class="navbar__nav-link"><span>Главная</span></a>  
@@ -87,7 +92,7 @@
 </li>	
 							</ul>							
 						</div>
-						<div class="cols navbar__collapse-cols cols  is--right">							
+						<div class="navbar__collapse-cols cols  is--right">
 							<a href="tel:+74959910430" class="navbar__tel  is--icon-left">
 								<div class="navbar__tel-icon"><svg class="icon-svg icon-contacts-tel" role="img">
 	<use xlink:href="/img/svg/sprite.svg#contacts-tel"></use>
@@ -114,8 +119,8 @@
 		</li>
 	</ul>
 </div>		
-	<div class="page-header__block  is--page-heading  is--center">
-	<h1  class="page-header__heading  is--page-heading  is--center">Cтраница не найдена</h1>		
+	<div class="page-header__group  is--page-heading  is--center">
+	<h1 class="page-header__heading  is--page-heading  is--center">Cтраница не найдена</h1>		
 </div>
 </div>
 		<div class="content-block__elem      text__block  is--center">

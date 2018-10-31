@@ -57,6 +57,56 @@
 					block_icon="form-email"
 				]]
 			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--select">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-select.html"
+					form_id="{{form_id}}"
+					block_id="select"
+					block_prefix="{{form_prefix}}"
+					block_attr="  "
+					block_mod="{{form_mod}}"
+					block_mod_elem="  "
+					block_color="{{form_color}}"
+					block_attr="  "
+					block_required="required"
+					block_label="select"
+					block_option="<option>Пункт 1</option><option>Пункт 2</option><option>Пункт 3</option>"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--radio">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-radio-group.html"
+					form_id="{{form_id}}"
+					block_id="year"
+					block_prefix="{{form_prefix}}"
+					block_attr="  "
+					block_mod="{{form_mod}}"
+					block_mod_elem="  "
+					block_color="{{form_color}}"
+					block_required="required"
+					block_name="Период, лет"
+					block_label="Период, <small>лет</small>"
+					block_placeholder="Период, лет"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--range">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-range.html"
+					form_id="{{form_id}}"
+					block_id="range-floor"
+					block_prefix="form__"
+					block_mod="  "
+					block_mod_elem="  "
+					block_color="{{form_color}}"
+					block_label="Этаж:"
+					block_type="double"
+					block_step=" 1"
+					block_min=" 1"
+					block_max="24"
+					block_from=" 4"
+					block_to="20"
+				]]
+			</div>
 			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--textarea">
 				[[azbntple 
 					tpl="/src/block/site/default/form/elem-textarea.html"

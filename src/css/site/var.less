@@ -2,7 +2,7 @@
 @url-site:'';
 @url-path:'/wp-content/themes/azbn7theme'; 
 //@url-path:'/okna-story/';
-//@url-path:'';
+@url-path:'';
 @url-path-css:'@{url-path}/css';
 @url-path-fonts:'@{url-path}/fonts';
 @url-path-img:'@{url-path}/img';
@@ -19,18 +19,13 @@
 @black-32: 			#324350;
 @black-27: 			lighten(@black, 15.3%); 	//#272727
 @black-61: 			lighten(@black, 38%); 		//#616161
-@green:				#409999;
 @green-light:		#AAC72D;
 @green-dark:		#009948;
 @red:				#C31846;
 @orange:			#DF8600;
 @yellow:			#FECC0E;
-@blue:				#00AEF3;
-@blue-light:		#00B6DF;
-@blue-deep-light:	#DDEEF4;
-@blue-deep-dark:	#004A7F;
-@blue-dark:			#0460A2;
 
+//base
 @black: 			#000;
 @black-5d: 			#5D5D5E;
 @black-d2: 			#D2D2D2;
@@ -39,6 +34,9 @@
 @white-f5:			#F5EAE4;
 @white-e9:			#E9E7E0;
 @green:				#C6D088;
+@blue:				#00AEF3;
+@blue-dark:			#0460A2; 
+@blue-light:		#0460A2; 
 
 @color-vk: 			#4d7198;
 @color-youtube: 	#bb0000;
@@ -74,8 +72,6 @@
 @b-color-a:						@blue-dark; 
 @b-color-a-hover:				@blue; 
 @b-color-h:						@blue-dark; 
-//@b-color-invers:				@white; 
-//@b-color-invers-h:			@orange;
 @b-html-bg:						@white; 
 @b-body-bg:						@white; 
 @b-line:						@white; 
@@ -87,19 +83,13 @@
 @b-fs: 							18px;
 @b-lh: 							24px;
 @trs-site: 						all 0.35s ease; 
-//@trs-site: 						all 0.35s cubic-bezier(0.4, 0, 1, 1); 
-//@trs-site: 					all 0.35s cubic-bezier(.77,.09,.3,1); 
-//@trs-btn: 					all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
-@trs-btn: 						@trs-site;
-@trs:							cubic-bezier(0.13, 0.47, 0.18, 0.9);
-//@trs:							ease;
 //===== wp admin bar =====//
 @wp_bar_device: 				46px;
 @wp_bar_screen: 				32px;
 //===== nav =====//
 @navbar-bg-screen:				@white; 
-@navbar-bg-screen-hover:		@blue-deep-light; 
-@navbar-bg-device:				@blue-deep-light;
+@navbar-bg-screen-hover:		@blue; 
+@navbar-bg-device:				@blue;
 @navbar-ff:						@b-ff;
 @navbar-fs:						@b-fs; 
 @navbar-lh:						@b-lh;  
@@ -229,7 +219,7 @@
 @form_control_height:			50px;
 @form_control_height_textarea:	145px;
 @form_control_border_radius:	0px;
-@form_control_border_color:		@blue-light;
+@form_control_border_color:		@blue;
 @form_control_border_width:		2px;
 //= focus =
 @form_control_focus_bg_color:	@white;
@@ -241,7 +231,7 @@
 //= focus =
 @form_control_focus_t_color:	@b-color-h;
 //== placeholder ==
-@form_control_plh_color:		@blue-light;
+@form_control_plh_color:		@blue;
 @form_control_plh_fs:			@b-fs;
 @form_control_plh_lh:			@b-lh;
 //= focus =
@@ -281,6 +271,11 @@
 @form_control_w_focus_sw_border_color:	@yellow;
 @form_control_w_focus_sw_l_bg_color:		@yellow;
 
+//== radio ==
+@radio_gutter: 			4px;
+@radio_bg: 				@b-color-a;
+@radio_bg_hover: 		@b-color-a-hover;
+@radio_bg_active: 		@b-color;
 //===== end's form input =====//
 //===== search =====//
 @search_border:				1px;
@@ -327,8 +322,6 @@
 @modal_btn_bg_hover:			@b-color-a-hover;
 @modal_btn_border_color_hover:	@b-color-a-hover;
 //===== end's modal =====//
-
-
 
 @media-point-xxs: ~"(max-width: 565px)";
 @media-point-xxs-l: ~"(max-width: 565px) and (orientation:landscape)";
@@ -414,7 +407,7 @@
 	outline: none;
 	background: none;
 	text-decoration: none;
-	transition: @trs-btn;
+	transition: @trs-site;
 	border: 0;
 }
 .brad(@rad_tl: 5px, @rad_tr: 5px, @rad_br: 5px, @rad_bl: 5px){

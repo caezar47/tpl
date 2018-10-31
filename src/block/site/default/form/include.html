@@ -1,16 +1,86 @@
 <h4 class="{{block_prefix}}heading">{{block_heading}}</h4>
-<div style="margin-bottom: 20px; max-width: 275px;">
+<div style="margin-bottom: 100px; max-width: 785px;">
 	[[azbntple 
 		tpl="/src/block/site/default/form/panel-include.html" 
 		block_prefix="form-panel__"
-		block_mod="  "
+		block_mod="is--index-reviews"
+		block_bg="{{url-path-img}}/temp/bg-form-morgage.jpg"
 		form_prefix="form__"
-		form_id="fsrev"
+		form_id="f_default"
 		form_mod="  " 
 		form_color="  "
-		form_heading_mod="is--form-panel  is--center"
-		form_heading="Оставьте свой отзыв"
-		form_heading_small="  "
+
+		block_heading_mod="is--form-panel"
+		block_heading_level="h1"
+		block_heading="Form element"
+		block_heading_small_level="div"
+		block_heading_small="  "
+
+		form_btn_name="Отправить"
+		form_btn_mod="  " 
+	]]
+</div>
+<div style="margin-bottom: 100px; max-width: 785px;">
+	[[azbntple 
+		tpl="/src/block/site/default/form/panel-default.html" 
+		block_prefix="form-panel__"
+		block_mod="is--index-reviews"
+		block_bg="{{url-path-img}}/temp/bg-form-morgage.jpg"
+		form_prefix="form__"
+		form_id="f_default"
+		form_mod="  " 
+		form_color="  "
+
+		block_heading_mod="is--form-panel"
+		block_heading_level="h1"
+		block_heading="Form default"
+		block_heading_small_level="div"
+		block_heading_small="Свяжитесь с нами"
+
+		form_btn_name="Отправить"
+		form_btn_mod="  " 
+	]]
+</div>
+<div style="margin-bottom: 100px; max-width: 785px;">
+	[[azbntple 
+		tpl="/src/block/site/default/form/panel-call.html" 
+		block_prefix="form-panel__"
+		block_mod="  "
+		block_bg="  "
+		form_prefix="form__"
+		form_id="f_call"
+		form_mod="  " 
+		form_color="  "
+
+		block_heading_mod="is--form-panel"
+		block_heading_level="h1"
+		block_heading="Заказать обратный звонок"
+		block_heading_small_level="div"
+		block_heading_small="Свяжитесь с нами"
+
+
+		form_btn_name="Отправить"
+		form_btn_mod="  " 
+	]]
+</div>
+<div style="margin-bottom: 20px; max-width: 785px;">
+	[[azbntple 
+		tpl="/src/block/site/default/form/panel-reviews.html" 
+		block_prefix="form-panel__"
+		block_mod="  "
+		block_bg="  "
+		form_prefix="form__"
+		form_id="f_reviews"
+		form_mod="is--reviews" 
+		form_color="  "
+
+		block_heading_mod="is--form-panel"
+		block_heading_level="h1"
+		block_heading="Оставить отзыв"
+		block_heading_small_level="div"
+		block_heading_small="Свяжитесь с нами"
+
+
 		form_btn_name="Отправить"
 		form_btn_mod="  " 
 	]]
@@ -24,18 +94,3 @@
 		block_placeholder="Поиск по названию платья"
 	]]
 </div> 
-<div style="margin-bottom: 20px">
-	[[azbntple 
-		tpl="8/src/block/site/default/form/panel.html" 
-		block_prefix="form-panel__"
-		block_mod="is--aside"
-		form_prefix="form__"
-		form_id="fsr"
-		form_mod="  " 
-		form_color="  "
-		form_heading="Форма обратной связи"
-		form_heading_small="  "
-		form_btn_name="Отправить"
-		form_btn_mod="is--block"
-	]]
-</div>

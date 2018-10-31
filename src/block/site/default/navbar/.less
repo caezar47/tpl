@@ -52,35 +52,16 @@
 	&container{
 		@media @media-point-device-lg {width: 100%;}
 	}
-	&row{
-		align-items: center;
-		justify-content: space-between;
-	}
-	/*&cols{
-		&.is--header{
-			width: 100%;
-			@media @media-point-screen-lg {display: none;}
-		}
-		&.is--collapse{
-			width: 0;
-			padding: 0;
-			@media @media-point-screen-lg {
-				width: 100%;
-				padding-left: 15px;
-				padding-right: 15px;
-			}
-		}
-	}*/
 	//header
 	&header{
 		width: 100%;
 		@media @media-point-screen-lg {display: none;}		
 	}
-	&row-header{
+	&header-row{
 		align-items: center;
 		justify-content: space-between;
 	}
-	&cols-header{
+	&header-cols{
 		&.is--hamburger{}
 		&.is--tel{}
 		&.is--brand{}
@@ -92,7 +73,7 @@
 		width: 100%;
 		transition: none;
 		max-width: 140px;
-		//height: 53px;
+		height: 53px;
 		img{width: 100%;}
 		@media @media-point-screen-lg {
 			max-width: 207px;		

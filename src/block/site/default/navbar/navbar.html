@@ -1,9 +1,9 @@
 <nav class="{{navbar_prefix}}block  {{navbar_mod}}">
 	<div class="{{navbar_prefix}}inner">
-		<div class="container {{navbar_prefix}}container">
-			<div class="{{navbar_prefix}}header">
-				<div class="row {{navbar_prefix}}row-header ">
-					<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+		<div class="{{navbar_prefix}}header">
+			<div class="{{navbar_prefix}}container container  is--header">
+				<div class="{{navbar_prefix}}header-row row ">
+					<div class="{{navbar_prefix}}header-cols cols  is--hamburger">
 						<div class="{{navbar_prefix}}hamburger">
 							<button class="{{navbar_prefix}}hamburger-card" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
 								<span class="{{navbar_prefix}}hamburger-card-inner">
@@ -14,26 +14,27 @@
 							</button>
 						</div>
 					</div>
-					<div class="cols {{navbar_prefix}}cols-header  is--brand">
-						<a class="{{navbar_prefix}}brand  {{navbar_scrollto}}" href="{{page.index}}">
-							<img src="{{url-path-img}}/svg/logotip.svg" alt="">
+					<div class="{{navbar_prefix}}header-cols cols  is--brand">
+						<a class="{{navbar_prefix}}brand" href="{{page.index}}">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]
 						</a>
 					</div>
-					<div class="cols {{navbar_prefix}}cols-header  is--tel">
+					<div class="{{navbar_prefix}}header-cols cols  is--tel">
 						<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]</a>
 					</div>
 				</div>
 			</div>
-				
-			<div class="{{navbar_prefix}}collapse" >
+		</div>
+		<div class="{{navbar_prefix}}collapse" >
+			<div class="{{navbar_prefix}}container  container  is--collapse">
 				<div class="{{navbar_prefix}}collapse-inner">	
 					<div class="row {{navbar_prefix}}collapse-row">
-						<div class="cols {{navbar_prefix}}collapse-cols cols  is--left">
+						<div class="{{navbar_prefix}}collapse-cols cols  is--left">
 							<a class="{{navbar_prefix}}brand" href="{{page.index}}">
-								<img src="{{url-path-img}}/svg/logotip.svg" alt="">
+								[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]
 							</a> 
 						</div>
-						<div class="cols {{navbar_prefix}}collapse-cols cols  is--center">
+						<div class="{{navbar_prefix}}collapse-cols cols  is--center">
 							<ul class="{{navbar_prefix}}nav">
 								[[azbntple 
 									tpl="/src/block/site/default/navbar/item.html" 
@@ -93,7 +94,7 @@
 								]]	
 							</ul>							
 						</div>
-						<div class="cols {{navbar_prefix}}collapse-cols cols  is--right">							
+						<div class="{{navbar_prefix}}collapse-cols cols  is--right">
 							<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon-left">
 								<div class="{{navbar_prefix}}tel-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]</div>
 								{{contacts.phone}}

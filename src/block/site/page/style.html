@@ -1,18 +1,13 @@
 <main class="{{content_prefix}}panel">
 	<div class="{{content_prefix}}container container  is--full">
 		[[azbntple 
-			tpl="/src/block/site/default/breadcrumb/level1.html" 
-			bread_prefix="breadcrumb__"
-			bread_mod="  "
-			level_1="{{block_heading}}"
-		]]
-		[[azbntple
-			tpl="/src/block/site/default/page-header/heading.html" 
-			header_prefix="page-header__" 
-			header_mod="{{block_heading_mod}}  {{content_mod}}"
-			header_level="{{block_heading_level}}"
-			header="{{block_heading}}"
-		]]	
+			tpl="/src/block/site/default/page-header/panel.html"
+			block_prefix="page-header__" 
+			block_mod="{{block_heading_mod}}"
+			block_heading_level="{{block_heading_level}}"
+			block_heading="{{block_heading}}"
+			block_bread_mod="{{block_bread_mod}}"
+		]]		
 		<div class="{{content_prefix}}elem  {{content_mod}}">
 			[[azbntple 
 				tpl="/src/block/site/default/text/panel-test.html"
@@ -25,6 +20,11 @@
 				tpl="/src/block/site/default/page-header/include.html"
 				block_prefix="{{content_prefix}}"
 				block_heading="Заголовки"
+				block_heading_level="h1"
+				block_heading_mod="is--page-heading"
+				block_bread_mod="  "
+				block_heading_small_level="div"
+				block_heading_small="Подзголовок"
 			]]
 		</div>
 		<div class="{{content_prefix}}elem  {{content_mod}}">
