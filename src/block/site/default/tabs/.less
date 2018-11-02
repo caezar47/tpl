@@ -209,12 +209,12 @@
 		//padding: 5px 42px;
 		font-size: @b-fs;
 		line-height: @b-lh - 2;
-		color: @black-92;
+		color: @b-color;
 		padding: 12px 30px;
 		margin-bottom: 10px;
 		border-width: 3px;
 		border-style: solid;
-		border-color: fadeout(@black-92, 0%);
+		border-color: fadeout(@b-block-bg, 0%);
 		//border-bottom-color: fadeout(@b-color-a, 0%);
 		&.dropdown-toggle{
 
@@ -231,13 +231,13 @@
 		.tabs__item.open &,
 		.tabs__item.is--active &,
 		.tabs__item.active &{
-			color: @blue-light;
+			color: @b-color-a-hover;
 		}
 		.tabs__item.open &,
 		.tabs__item.is--active &,
 		.tabs__item.active &{
 			cursor: default;
-			border-color: @blue-light;
+			color: @b-color-a-hover;
 		}
 	}
 	&dropdown-icon{ 

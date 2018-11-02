@@ -4,7 +4,7 @@
 	padding: 15px 25px;
 	//font-size: @btn_fs;
 	//line-height: @btn_lh;
-	border-radius: @btn_border_radius;
+	border-radius: @btn_radius;
 	@media @media-point-screen {
 		padding: 20px 3vw;
 	}
@@ -122,7 +122,7 @@
 			color: @white;
 		}
 	}
-	&item-name{
+	&name{
 		position: relative;
 		z-index: 2;
 	}
@@ -166,17 +166,6 @@
 		&:hover{			
 			color: @b-color-a-hover;
 		}
-		&.is--download{
-			color: @blue; 
-			padding-left: 75px;
-			padding-top: 15px;
-			padding-bottom: 15px;
-			font-size: @btn_fs;
-			line-height: @btn_lh;
-			&:hover{			
-				color: @b-color-a-hover;
-			}
-		}
 	}
 	&icon{
 		svg{display: block;}
@@ -186,12 +175,7 @@
 		transform: translateY(-50%);
 		width: 26px;
 		height: 34px;
-		color: @b-color-a-hover;
-		&.is--download{
-			color: @blue; 
-			width: 54px;
-			height: 54px;
-		}		
+		color: @b-color-a-hover;	
 	}
 }
 .btn-nav__{
@@ -284,4 +268,4 @@
 		width: 100%;
 		height: 100%;
 	}
-}
+} 

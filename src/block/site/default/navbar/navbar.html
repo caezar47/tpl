@@ -14,13 +14,17 @@
 							</button>
 						</div>
 					</div>
-					<div class="{{navbar_prefix}}header-cols cols  is--brand">
-						<a class="{{navbar_prefix}}brand" href="{{page.index}}">
+					<div class="{{navbar_prefix}}header-cols cols  is--logotip">
+						<a class="{{navbar_prefix}}logotip" href="{{page.index}}">
 							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]
 						</a>
 					</div>
 					<div class="{{navbar_prefix}}header-cols cols  is--tel">
-						<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]</a>
+						[[azbntple 
+							tpl="/src/block/site/default/continfo/panel-navbar-header.html" 
+							block_prefix="continfo__" 
+							block_mod="is--navbar-header" 
+						]]
 					</div>
 				</div>
 			</div>
@@ -30,7 +34,7 @@
 				<div class="{{navbar_prefix}}collapse-inner">	
 					<div class="row {{navbar_prefix}}collapse-row">
 						<div class="{{navbar_prefix}}collapse-cols cols  is--left">
-							<a class="{{navbar_prefix}}brand" href="{{page.index}}">
+							<a class="{{navbar_prefix}}logotip" href="{{page.index}}">
 								[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]
 							</a> 
 						</div>
@@ -44,18 +48,18 @@
 									navbar_mod="is--index"
 								]]	
 								[[azbntple 
-									tpl="/src/block/site/default/navbar/item.html" 
+									tpl="/src/block/site/default/navbar/item-drop.html" 
 									navbar_prefix="navbar__" 
-									navbar_name="Услуги" 
+									navbar_name="Dropdown" 
 									navbar_link="{{page.services}}"
 									navbar_mod="  "
 								]]	
 								[[azbntple 
-									tpl="/src/block/site/default/navbar/item.html" 
+									tpl="/src/block/site/default/navbar/item-drop-full.html" 
 									navbar_prefix="navbar__" 
-									navbar_name="Цены и акции" 
+									navbar_name="Dropdown full" 
 									navbar_link="{{page.price}}"
-									navbar_mod="  "
+									navbar_mod="is--full"
 								]]	
 								[[azbntple 
 									tpl="/src/block/site/default/navbar/item.html" 
@@ -81,7 +85,7 @@
 								[[azbntple 
 									tpl="/src/block/site/default/navbar/item.html" 
 									navbar_prefix="navbar__" 
-									navbar_name="Полезные материалы" 
+									navbar_name="Новости" 
 									navbar_link="{{page.articles}}"
 									navbar_mod="  "
 								]]	
@@ -94,11 +98,12 @@
 								]]	
 							</ul>							
 						</div>
-						<div class="{{navbar_prefix}}collapse-cols cols  is--right">
-							<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon-left">
-								<div class="{{navbar_prefix}}tel-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]</div>
-								{{contacts.phone}}
-							</a>
+						<div class="{{navbar_prefix}}collapse-cols cols  is--right">		
+							[[azbntple 
+								tpl="/src/block/site/default/continfo/panel-navbar.html" 
+								block_prefix="continfo__" 
+								block_mod="is--navbar" 
+							]]
 						</div>
 					</div>
 				</div>

@@ -1,16 +1,20 @@
 {
 	"contacts":{
-		"name":"ОкнаСтрой",
-		"domain":"окнастрой.москва",
-		"domain_link":"http://окнастрой.москва/",
-		"color":"#0460a2",
+		"name":"TPL",
+		"domain":"domain.domain",
+		"domain_link":"http://domain.domain/",
+		"color":"#F24F00",
 		"agreement_page":"agreement",
-		"copyright":"ОкнаСтрой",
-		"email":"oknastory@gmail.com",
-		"phone":" +7 (495) 991-04-30",  
-		"phone_tel":"+74959910430",   
-		"clock":"<p>Пн-Пт: 8:00-17:00. Перерыв 13:00-14:00</p><p>Сб-Вс: выходной</p>",  
-		"address":"г. Москва ул. Бориса Жигуленкова, д.21"
+		"copyright":"TPL",
+		"email":"email@email.ru",
+		"phone":"+7 (012) 345-67-89",  
+		"phone_tel":"+70123456789",   
+		"clock":"<p>Пн-Пт: 07:00-16:00</p><p>Сб-Вс: выходной</p>",  
+		"address":"г. Орёл, Сквер им. Сталина",
+		"map_center_coord":"[52.97067, 36.084622]",
+		"map_zoom":"17",
+		"map_point_coord":"[52.97067, 36.084622]",
+		"map_point_heading":"Мы здесь!"
 	},
 	"soc":{
 		"vk":"https://vk.com/",
