@@ -1,6 +1,59 @@
 .tabs__{
 	@gutter: 15px;
-	&block{ 
+	&panel{
+		margin-bottom: 30px;
+		@media @media-point-screen {
+			margin-bottom: 2.1vw;
+		}
+	}
+	&nav{
+		list-style: none;
+		padding: 0px;
+		margin: -10px -5px 0; 
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+	}
+	&item{	
+		padding: 10px 5px 0;
+	}
+	&link{
+		position: relative;
+		display: inline-block;
+		font-size: @b-fs - 2;
+		line-height: @b-lh - 2;
+		color: @tabs_color;
+		padding: 12px 30px;
+		border-width: 3px;
+		border-style: solid;
+		border-color: @tabs_border_color;
+		&.dropdown-toggle{}
+		@media @media-point-screen {display: block;}
+		span{
+			position: relative;
+			z-index: 2;			
+		}
+		&:hover,
+		.tabs__item.open &,
+		.tabs__item.is--active &,
+		.tabs__item.active &{
+			color: @tabs_color_active;
+			background-color: @tabs_bg_active;
+			border-color: @tabs_border_color_active; 
+		}
+		.tabs__item.open &,
+		.tabs__item.is--active &,
+		.tabs__item.active &{
+			cursor: default;
+		}
+	}
+	&pane{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	/*&block{ 
 		@media @media-point-device-lg {
 			background-color: @white;
 			background: @navbar-bg-device;	
@@ -40,13 +93,6 @@
     			//height: 100%;
 			}
 		}
-	}
-	&panel{
-		margin-bottom: 30px;
-		@media @media-point-screen {
-			margin-bottom: 2.1vw;
-		}
-
 	}
 	&btn-block{
 		//background-color: fadeout(@blue-light, 70%);
@@ -192,54 +238,6 @@
 			height: auto;
 		}
 	}
-	&nav{
-		list-style: none;
-		padding: 0px;
-		margin: 0 -5px; 
-		display: flex;
-		flex-wrap: wrap;
-		position: relative;
-	}
-	&item{	
-		padding: 0 5px;
-	}
-	&link{
-		position: relative;
-		display: block;
-		//padding: 5px 42px;
-		font-size: @b-fs;
-		line-height: @b-lh - 2;
-		color: @b-color;
-		padding: 12px 30px;
-		margin-bottom: 10px;
-		border-width: 3px;
-		border-style: solid;
-		border-color: fadeout(@b-block-bg, 0%);
-		//border-bottom-color: fadeout(@b-color-a, 0%);
-		&.dropdown-toggle{
-
-		}
-		@media @media-point-device-lg {display: inline-block;}
-		@media @media-point-screen {
-			//padding: 15px 1.4vw;
-		}
-		span{
-			position: relative;
-			z-index: 2;			
-		}
-		&:hover,
-		.tabs__item.open &,
-		.tabs__item.is--active &,
-		.tabs__item.active &{
-			color: @b-color-a-hover;
-		}
-		.tabs__item.open &,
-		.tabs__item.is--active &,
-		.tabs__item.active &{
-			cursor: default;
-			color: @b-color-a-hover;
-		}
-	}
 	&dropdown-icon{ 
 		width: 10px;
 		height: 7px;
@@ -282,11 +280,5 @@
 	}
 	&dropdown-link{
 		color: @b-color-h;
-	}
-	&pane{
-		display: none;
-		&.active{
-			display: block;
-		}
-	}
+	}*/
 }

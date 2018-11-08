@@ -10,8 +10,17 @@
 	&btn{}
 }
 .form__{
-	&block{}
-	&inner{}
+	&block{
+		&.is--block{
+			padding: 35px 0;
+			background-color: @b-block-bg;
+		}
+	}
+	&panel{}
+	&container{
+		position: relative;
+		z-index: 2;
+	}
 	&row{
 		margin-top: -10px;
 		&.is--reviews{
@@ -42,7 +51,7 @@
 				}
 			}
 		}
-		&.is--calc{
+		&.is--block{
 			@media @media-point-screen {
 				.makeCols(4, 12);
 				&.is--agreement{
@@ -52,6 +61,7 @@
 					padding-top: 30px;
 				}
 				&.is--btn{
+					.makeCols(12, 12);
 					text-align: center;	
 					padding-top: 10px;
 				}

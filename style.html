@@ -459,68 +459,67 @@
 		<div class="content-block__elem    ">
 			<h4 class="content-block__heading">Формы</h4>
 <div style="margin-bottom: 100px; max-width: 785px;">
-	<div class="form-panel__block  is--index-reviews">
-	<div class="form-panel__inner  is--index-reviews">
-		<div class="page-header__panel  is--form-panel">
-	<div class="page-header__group  is--form-panel">
-	<h1 class="page-header__heading  is--form-panel">Form element</h1>		
+	<div class="form__block    "  >
+	<div class="page-header__panel  is--h4">
+	<div class="page-header__group  is--h4">
+	<h4 class="page-header__heading  is--h4">Form element</h4>		
+	<div class="page-header__heading-small  is--h4">text</div>		
 </div>
-</div>	
-		<form action="#" class="form__block    "  >
-	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
-	<input type="hidden" name="f[Форма: {{form_heading}}]">
-	<div class="form__inner    "  >
-		<div class="row form__row  is--wrap">
-			<div class="cols form__cols      is--name">
+</div>
+	<form action="#" class="form__panel    "  >
+		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+		<input type="hidden" name="f[Форма: Form element]">
+		<div class="form__row row    ">
+			<div class="form__cols cols  is--name    ">
 				<div class="form__item      is--name">
-	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]          is--name" id="f_default[name]" name="f[Имя]" placeholder="Имя">
+	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]          is--name" id="name[name]" name="f[Имя]" placeholder="Имя">
 </div>
 			</div>
-			<div class="cols form__cols      is--tel">
+			<div class="form__cols cols  is--tel    ">
 				<div class="form__item      is--tel">
-	<input type="tel"     class="form__control form-control validate[required, custom[phone]]          is--tel" id="f_default[tel]" name="f[Телефон]" placeholder="Телефон">
+	<input type="tel"     class="form__control form-control validate[required, custom[phone]]          is--tel" id="tel[tel]" name="f[Телефон]" placeholder="Телефон">
 </div>
 			</div>
-			<div class="cols form__cols      is--email">
+			<div class="form__cols cols  is--email    ">
 				<div class="form__item      is--email">
-	<input type="email"     class="form__control form-control validate[required, custom[email]]          is--email" id="f_default[email]" name="f[E-mail]" placeholder="E-mail">
+	<input type="email"     class="form__control form-control validate[required, custom[email]]          is--email" id="email[email]" name="f[E-mail]" placeholder="E-mail">
 </div>
 			</div>
-			<div class="cols form__cols      is--select">
+			<div class="form__cols cols  is--select    ">
 				<div class="form__item        ">
-	<select     class="form__control form-control validate[required]  is--select            " id="f_default[select]" name="f[select]">
+	<select     class="form__control form-control validate[required]  is--select            " id="select[select]" name="f[select]">
 		<option>Пункт 1</option><option>Пункт 2</option><option>Пункт 3</option>
 	</select>
 </div>
 			</div>
-			<div class="cols form__cols      is--radio">
+			<div class="form__cols cols  is--radio    ">
 				<div class="form__item        ">
 	<div class="form__label        ">
 		Период, <small>лет</small>
 	</div>  
 	<div class="form__radio-group        ">
 		<div class="form__radio-elem        ">
-			<label for="f_default1" class="form__radio        ">
-				<input type="radio" class="form__radio-input        " name="f_default[year]" id="f_default1" value="1" checked>
+			<label for="year1" class="form__radio        ">
+				<input type="radio" class="form__radio-input        " name="year[year]" id="year1" value="1" checked>
 				<div class="form__radio-btn        ">1</div>
 			</label>
 		</div>
 		<div class="form__radio-elem        ">
-			<label for="f_default2" class="form__radio        ">
-				<input type="radio" class="form__radio-input        " name="f_default[year]" id="f_default2" value="2">
+			<label for="year2" class="form__radio        ">
+				<input type="radio" class="form__radio-input        " name="year[year]" id="year2" value="2">
 				<div class="form__radio-btn        ">2</div>
 			</label>
 		</div>
 		<div class="form__radio-elem        ">
-			<label for="f_default3" class="form__radio        ">
-				<input type="radio" class="form__radio-input        " name="f_default[year]" id="f_default3" value="3">
+			<label for="year3" class="form__radio        ">
+				<input type="radio" class="form__radio-input        " name="year[year]" id="year3" value="3">
 				<div class="form__radio-btn        ">3</div>
 			</label>
 		</div>
 	</div>
 </div>
 			</div>
-			<div class="cols form__cols      is--range">
+			<div class="form__cols cols  is--range    ">
 				<div class="form__item        ">
 	<div class="form__label        ">
 		Этаж:
@@ -534,167 +533,153 @@
 		data-step=" 1">
 </div>
 			</div>
-			<div class="cols form__cols      is--textarea">
+			<div class="form__cols cols  is--textarea    ">
 				<div class="form__item      is--textarea">
-	<textarea     class="form__control form-control validate[required]          is--textarea" id="f_default[comments]" name="f[Сообщение]" placeholder="Сообщение"></textarea>
+	<textarea     class="form__control form-control validate[required]          is--textarea" id="comments[comments]" name="f[Сообщение]" placeholder="Сообщение"></textarea>
 </div>
 			</div>
-			<div class="cols form__cols      is--agreement">
+			<div class="form__cols cols  is--agreement    ">
 				<div class="form__item  is--agreement        ">
 	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
-	<div class="form__text        ">		
+	<div class="{{form_prefix}}text        ">		
 		Нажимая на кнопку «Отправить» вы соглашаетесть с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
 	</div>	
 </div>	
 			</div>
-			<div class="cols form__cols      is--btn">
+			<div class="form__cols cols  is--btn    ">
 				<button type="submit" class="btn__item    ">
 	<span class="btn__name">Отправить</span>
 </button>				
 			</div>
 		</div>	
-	</div> 
-</form> 	
-	</div>
-</div> 
+	</form> 
+</div>
 </div>
 <div style="margin-bottom: 100px; max-width: 785px;">
-	<div class="form-panel__block  is--index-reviews"  style="background-image: url(/img/temp/bg-form-morgage.jpg)">
-	<div class="form-panel__inner  is--index-reviews">
-		<div class="page-header__panel  is--form-panel">
-	<div class="page-header__group  is--form-panel">
-	<h1 class="page-header__heading  is--form-panel">Form default</h1>		
-	<div class="page-header__heading-small  is--form-panel">Свяжитесь с нами</div>		
+	<div class="form__block    "  >
+	<div class="page-header__panel  is--h4">
+	<div class="page-header__group  is--h4">
+	<h4 class="page-header__heading  is--h4">Form default</h4>		
+	<div class="page-header__heading-small  is--h4">Свяжитесь с нами</div>		
 </div>
-</div>	
-		<form action="#" class="form__block    "  >
-	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
-	<input type="hidden" name="f[Форма: Form default]">
-	<div class="form__inner    "  >
-		<div class="row form__row      is--wrap">
-			<div class="cols form__cols      is--name">
+</div>
+	<form action="#" class="form__panel    "  >
+		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+		<input type="hidden" name="f[Форма: Form default]">
+		<div class="form__row row    ">
+			<div class="form__cols cols  is--name    ">
 				<div class="form__item      is--name">
-	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]          is--name" id="f_default[name]" name="f[Имя]" placeholder="Имя">
+	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]          is--name" id="name[name]" name="f[Имя]" placeholder="Имя">
 </div>
 			</div>
-			<div class="cols form__cols      is--tel">
+			<div class="form__cols cols  is--tel    ">
 				<div class="form__item      is--tel">
-	<input type="tel"     class="form__control form-control validate[required, custom[phone]]          is--tel" id="f_default[tel]" name="f[Номер телефона]" placeholder="Номер телефона">
+	<input type="tel"     class="form__control form-control validate[required, custom[phone]]          is--tel" id="tel[tel]" name="f[Номер телефона]" placeholder="Номер телефона">
 </div>
 			</div>
-			<div class="cols form__cols      is--email">
+			<div class="form__cols cols  is--email    ">
 				<div class="form__item      is--email">
-	<input type="email"     class="form__control form-control validate[required, custom[email]]          is--email" id="f_default[email]" name="f[E-mail]" placeholder="E-mail">
+	<input type="email"     class="form__control form-control validate[required, custom[email]]          is--email" id="email[email]" name="f[E-mail]" placeholder="E-mail">
 </div>
 			</div>
-			<div class="cols form__cols      is--btn">
+			<div class="form__cols cols  is--btn    ">
 				<button type="submit" class="btn__item    ">
 	<span class="btn__name">Отправить</span>
 </button>				
 			</div>
-			<div class="cols form__cols      is--agreement">
+			<div class="form__cols cols  is--agreement    ">
 				<div class="form__item  is--agreement        ">
 	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
-	<div class="form__text        ">		
+	<div class="{{form_prefix}}text        ">		
 		Нажимая на кнопку «Отправить», Вы соглашаетесь с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
 	</div>	
 </div>		
 			</div>
 		</div>	
-	</div> 
-</form> 	
-	</div>
-</div> 
+	</form> 
+</div>
 </div>
 <div style="margin-bottom: 100px; max-width: 785px;">
-	<div class="form-panel__block    ">
-	<div class="form-panel__inner    ">
-		<div class="page-header__panel  is--form-panel">
-	<div class="page-header__group  is--form-panel">
-	<h1 class="page-header__heading  is--form-panel">Заказать обратный звонок</h1>		
-	<div class="page-header__heading-small  is--form-panel">Свяжитесь с нами</div>		
+	<div class="form__block    "  >
+	<div class="page-header__panel  is--h4">
+	<div class="page-header__group  is--h4">
+	<h4 class="page-header__heading  is--h4">Заказать обратный звонок</h4>		
+	<div class="page-header__heading-small  is--h4">Свяжитесь с нами</div>		
 </div>
-</div>	
-		<form action="#" class="form__block    "  >
-	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
-	<input type="hidden" name="f[Форма: Заказать обратный звонок]">
-	<div class="form__inner    "  >
-		<div class="row form__row      is--wrap">
-			<div class="cols form__cols      is--name">
+</div>
+	<form action="#" class="form__panel    "  >
+		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+		<input type="hidden" name="f[Форма: Заказать обратный звонок]">
+		<div class="form__row row    ">
+			<div class="form__cols cols  is--name    ">
 				<div class="form__item      is--name">
-	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]          is--name" id="f_call[name]" name="f[Имя]" placeholder="Имя">
+	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]          is--name" id="name[name]" name="f[Имя]" placeholder="Имя">
 </div>
 			</div>
-			<div class="cols form__cols      is--tel">
+			<div class="form__cols cols  is--tel    ">
 				<div class="form__item      is--tel">
-	<input type="tel"     class="form__control form-control validate[required, custom[phone]]          is--tel" id="f_call[tel]" name="f[Номер телефона]" placeholder="Номер телефона">
+	<input type="tel"     class="form__control form-control validate[required, custom[phone]]          is--tel" id="tel[tel]" name="f[Номер телефона]" placeholder="Номер телефона">
 </div>
 			</div>
-			<div class="cols form__cols      is--btn">
+			<div class="form__cols cols  is--btn    ">
 				<button type="submit" class="btn__item    ">
 	<span class="btn__name">Отправить</span>
 </button>				
 			</div>
-			<div class="cols form__cols      is--agreement">
+			<div class="form__cols cols  is--agreement    ">
 				<div class="form__item  is--agreement        ">
 	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
-	<div class="form__text        ">		
+	<div class="{{form_prefix}}text        ">		
 		Нажимая на кнопку «Отправить», Вы соглашаетесь с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
 	</div>	
 </div>		
 			</div>
 		</div>	
-	</div> 
-</form> 	
-	</div>
-</div> 
+	</form> 
+</div>
 </div>
 <div style="margin-bottom: 20px; max-width: 785px;">
-	<div class="form-panel__block    ">
-	<div class="form-panel__inner    ">
-		<div class="page-header__panel  is--form-panel">
-	<div class="page-header__group  is--form-panel">
-	<h1 class="page-header__heading  is--form-panel">Оставить отзыв</h1>		
-	<div class="page-header__heading-small  is--form-panel">Свяжитесь с нами</div>		
+	<div class="form__block  is--reviews"  >
+	<div class="page-header__panel  is--h4">
+	<div class="page-header__group  is--h4">
+	<h4 class="page-header__heading  is--h4">Оставить отзыв</h4>		
+	<div class="page-header__heading-small  is--h4">Свяжитесь с нами</div>		
 </div>
 </div>
-		<form action="#" class="form__block  is--reviews"  >
-	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
-	<input type="hidden" name="f[Форма: Оставить отзыв]">
-	<div class="form__inner  is--reviews"  >
-		<div class="row form__row  is--reviews  is--wrap">
-			<div class="cols form__cols  is--reviews  is--name">
+	<form action="#" class="form__panel  is--reviews"  >
+		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+		<input type="hidden" name="f[Форма: Оставить отзыв]">
+		<div class="form__row row  is--reviews">
+			<div class="form__cols cols  is--name  is--reviews">
 				<div class="form__item  is--reviews  is--name">
-	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]  is--reviews      is--name" id="f_reviews[name]" name="f[Имя]" placeholder="Имя">
+	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]  is--reviews      is--name" id="name[name]" name="f[Имя]" placeholder="Имя">
 </div>
 			</div>
-			<div class="cols form__cols  is--reviews  is--tel">
+			<div class="form__cols cols  is--tel  is--reviews">
 				<div class="form__item  is--reviews  is--tel">
-	<input type="tel"     class="form__control form-control validate[required, custom[phone]]  is--reviews      is--tel" id="f_reviews[tel]" name="f[Номер телефона]" placeholder="Номер телефона">
+	<input type="tel"     class="form__control form-control validate[required, custom[phone]]  is--reviews      is--tel" id="tel[tel]" name="f[Номер телефона]" placeholder="Номер телефона">
 </div>
 			</div>
-			<div class="cols form__cols  is--reviews  is--textarea">
+			<div class="form__cols cols  is--textarea  is--reviews">
 				<div class="form__item  is--reviews  is--textarea">
-	<textarea     class="form__control form-control validate[required]  is--reviews      is--textarea" id="f_reviews[comments]" name="f[Сообщение]" placeholder="Сообщение"></textarea>
+	<textarea     class="form__control form-control validate[required]  is--reviews      is--textarea" id="comments[comments]" name="f[Сообщение]" placeholder="Сообщение"></textarea>
 </div>
 			</div>
-			<div class="cols form__cols  is--reviews  is--btn">
+			<div class="form__cols cols  is--btn  is--reviews">
 				<button type="submit" class="btn__item    ">
 	<span class="btn__name">Отправить</span>
 </button>				
 			</div>
-			<div class="cols form__cols  is--reviews  is--agreement">
+			<div class="form__cols cols  is--agreement  is--reviews">
 				<div class="form__item  is--agreement  is--reviews    ">
 	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
-	<div class="form__text  is--reviews    ">		
+	<div class="{{form_prefix}}text  is--reviews    ">		
 		Нажимая на кнопку «Отправить», Вы соглашаетесь с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
 	</div>	
 </div>	
 			</div>
 		</div>	
-	</div> 
-</form> 	
-	</div>
+	</form> 
 </div> 
 </div>
 <div style="margin-bottom: 20px; max-width: 315px;">
@@ -1247,11 +1232,97 @@
 		</div>
 	</div>
 	<div class="content-block__elem    ">
-		
+		<div class="container">
+	<h4 class="content-block__heading">Блоки форм</h4>
+</div>
+<div style="margin-bottom: 20px;">
+	<div class="form__block  is--block"  style="background-image: url(/img/temp/bg-form.jpg)">
+	<div class="form__container container  is--block"  >
+		<div class="page-header__panel  is--h2  is--center">
+	<div class="page-header__group  is--h2  is--center">
+	<h2 class="page-header__heading  is--h2  is--center">Form block default</h2>		
+	<div class="page-header__heading-small  is--h2  is--center">Свяжитесь с нами</div>		
+</div>
+</div>
+		<form action="#" class="form__panel  is--block"  >
+			<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+			<input type="hidden" name="f[Форма: Form block default]">
+			<div class="form__row row  is--block">
+				<div class="form__cols cols  is--name  is--block">
+					<div class="form__item  is--block  is--name">
+	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]  is--block      is--name" id="name[name]" name="f[Имя]" placeholder="Имя">
+</div>
+				</div>
+				<div class="form__cols cols  is--tel  is--block">
+					<div class="form__item  is--block  is--tel">
+	<input type="tel"     class="form__control form-control validate[required, custom[phone]]  is--block      is--tel" id="tel[tel]" name="f[Номер телефона]" placeholder="Номер телефона">
+</div>
+				</div>
+				<div class="form__cols cols  is--email  is--block">
+					<div class="form__item  is--block  is--email">
+	<input type="email"     class="form__control form-control validate[required, custom[email]]  is--block      is--email" id="email[email]" name="f[E-mail]" placeholder="E-mail">
+</div>
+				</div>
+				<div class="form__cols cols  is--btn  is--block">
+					<button type="submit" class="btn__item    ">
+	<span class="btn__name">Отправить</span>
+</button>				
+				</div>
+				<div class="form__cols cols  is--agreement  is--block">
+					<div class="form__item  is--agreement  is--block    ">
+	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
+	<div class="{{form_prefix}}text  is--block    ">		
+		Нажимая на кнопку «Отправить», Вы соглашаетесь с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
+	</div>	
+</div>		
+				</div>
+			</div>	
+		</form> 
+	</div>
+</div>
+</div>
 	</div>
 </main>
-		
-		<div class="modal__block  fade    " id="modal-message" tabindex="-1" role="dialog" aria-hidden="true">
+		<footer class="footer__block">	
+	<div class="footer__inner">	
+		<div class="footer__container container">
+			<div class="footer__row row  is--base">
+				<div class="footer__cols cols  is--copyright">
+					<a href="/" class="footer__logotip">
+						<svg class="icon-svg icon-logotip" role="img">
+	<use xlink:href="/img/svg/sprite.svg#logotip"></use>
+</svg>
+					</a>
+				</div>				
+				<div class="footer__cols cols  is--address  is--footer">
+	<div class="continfo__item   is--footer">
+		<span class="continfo__item-icon  is--footer"><svg class="icon-svg icon-contacts-address" role="img">
+	<use xlink:href="/img/svg/sprite.svg#contacts-address"></use>
+</svg></span>
+		<span class="continfo__item-name  is--footer">г. Орёл, Сквер им. Сталина</span>
+	</div>
+</div>
+<div class="footer__cols cols  is--email  is--footer">
+	<a href="mailto:email@email.ru" class="continfo__item   is--footer">
+		<span class="continfo__item-icon  is--footer"><svg class="icon-svg icon-contacts-email" role="img">
+	<use xlink:href="/img/svg/sprite.svg#contacts-email"></use>
+</svg></span>
+		<span class="continfo__item-name  is--footer">email@email.ru</span>
+	</a>
+</div>
+<div class="footer__cols cols  is--tel   is--footer">
+	<a href="tel:+70123456789" class="continfo__item   is--footer">
+		<span class="continfo__item-icon  is--footer"><svg class="icon-svg icon-contacts-tel" role="img">
+	<use xlink:href="/img/svg/sprite.svg#contacts-tel"></use>
+</svg></span>
+		<span class="continfo__item-name  is--footer">+7 (012) 345-67-89</span>
+	</a>
+</div>
+			</div>	
+		</div>
+	</div>
+</footer>
+		<div class="modal__block modals  fade    " id="modal-message" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog    ">
 		<div class="modal__body    " >
 			<button type="button" class="modal__btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
@@ -1270,7 +1341,7 @@
 		</div>
 	</div>
 </div>
-<div class="modal__block  fade    " id="modal-defaul-form" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal__block  modals  fade    " id="modal-defaul-form" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog    ">
 		<div class="modal__body    " >
 			<button type="button" class="modal__btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
@@ -1279,52 +1350,7 @@
 </svg>
 			</button>
 			<div class="modal__content    ">
-				<div class="form-panel__block  is--index-reviews"  style="background-image: url(/img/temp/bg-form-morgage.jpg)">
-	<div class="form-panel__inner  is--index-reviews">
-		<div class="page-header__panel  is--h4  is--center">
-	<div class="page-header__group  is--h4  is--center">
-	<h3 class="page-header__heading  is--h4  is--center">Рассчитать стоимость</h3>		
-	<div class="page-header__heading-small  is--h4  is--center">Мы перезвоним вам в ближайшее время</div>		
-</div>
-</div>	
-		<form action="#" class="form__block    "  >
-	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
-	<input type="hidden" name="f[Форма: Рассчитать стоимость]">
-	<div class="form__inner    "  >
-		<div class="row form__row      is--wrap">
-			<div class="cols form__cols      is--name">
-				<div class="form__item      is--name">
-	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]          is--name" id="f_default[name]" name="f[Имя]" placeholder="Имя">
-</div>
-			</div>
-			<div class="cols form__cols      is--tel">
-				<div class="form__item      is--tel">
-	<input type="tel"     class="form__control form-control validate[required, custom[phone]]          is--tel" id="f_default[tel]" name="f[Номер телефона]" placeholder="Номер телефона">
-</div>
-			</div>
-			<div class="cols form__cols      is--email">
-				<div class="form__item      is--email">
-	<input type="email"     class="form__control form-control validate[required, custom[email]]          is--email" id="f_default[email]" name="f[E-mail]" placeholder="E-mail">
-</div>
-			</div>
-			<div class="cols form__cols      is--btn">
-				<button type="submit" class="btn__item    ">
-	<span class="btn__name">Отправить заявку</span>
-</button>				
-			</div>
-			<div class="cols form__cols      is--agreement">
-				<div class="form__item  is--agreement        ">
-	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
-	<div class="form__text        ">		
-		Нажимая на кнопку «Отправить заявку», Вы соглашаетесь с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
-	</div>	
-</div>		
-			</div>
-		</div>	
-	</div> 
-</form> 	
-	</div>
-</div> 
+				
 			</div> 
 		</div>
 	</div>
