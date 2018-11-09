@@ -281,7 +281,11 @@
 			}
 		}		
 		.navbar__nav-item.dropdown &{
-			padding-left: 20px;
+			padding-right: 20px;
+			@media @media-point-screen-lg{
+				padding-left: 20px;
+				padding-right: 0;
+			}
 		}
 		.navbar__nav-item.open &,
 		.navbar__nav-item.is--active &{			
@@ -335,11 +339,11 @@
 			background-color: @navbar-collapse-bg;	
 			display: block;
 			transform-origin: 0 0;
-    		transform: translateY(-100%);
+    		transform: translateY(-150%);
     		opacity: 0;   
 			z-index: -1;		
     		.navbar__nav-item.open &{
-    			transform: translateY(0%);
+    			transform: translateY(15%);
     			transition: @trs-site;
     			opacity: 1;
     			z-index: 1;
@@ -350,6 +354,7 @@
 				left: 0;  
     			.navbar__nav-item.open &{
 					z-index: -1;
+    				transform: translateY(0%);
     			}			
     		}
 	  	}
