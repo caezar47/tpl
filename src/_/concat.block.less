@@ -15,35 +15,35 @@
 		}
 		&.is--full{
 			@media @media-point-smart {
-				min-height: ~"calc(100vh - @{navbar-xs})";
+				min-height: ~"calc(100vh - @{navbar_xs})";
 			}
 			@media @media-point-sm {
-				min-height: ~"calc(100vh - @{navbar-sm} - @{footer_device_sm_p})";
+				min-height: ~"calc(100vh - @{navbar_sm} - @{footer_device_sm_p})";
 			}
 			@media @media-point-md1 {
-				min-height: ~"calc(100vh - @{navbar-sm} - @{footer_device_sm_l})";
+				min-height: ~"calc(100vh - @{navbar_sm} - @{footer_device_sm_l})";
 			}
 			@media @media-point-screen {					
-				min-height: ~"calc(100vh - @{navbar-screen} -  @{footer_screen})";
+				min-height: ~"calc(100vh - @{navbar_screen} -  @{footer_screen})";
 			}
 			@media @media-point-md2 {
-				min-height: ~"calc(100vh - @{navbar-md} - @{footer_screen_md})";
+				min-height: ~"calc(100vh - @{navbar_md} - @{footer_screen_md})";
 			}
 			@media @media-point-lg {
-				min-height: ~"calc(100vh - @{navbar-lg} - @{footer_screen_lg} )"; 
+				min-height: ~"calc(100vh - @{navbar_lg} - @{footer_screen_lg} )"; 
 			}
 			@media @media-point-xxl {
-				min-height: ~"calc(100vh - @{navbar-xxl} -  @{footer_screen_xxl})"; 
+				min-height: ~"calc(100vh - @{navbar_xxl} -  @{footer_screen_xxl})"; 
 			}			
-			body.is--navbar-bottom &{
+			body.is--navbar_bottom &{
 				@media @media-point-sm {
-					min-height: ~"calc(100vh - @{navbar-sm} - @{footer_device_sm_p} - @{navbar-bottom})";
+					min-height: ~"calc(100vh - @{navbar_sm} - @{footer_device_sm_p} - @{navbar_bottom})";
 				}
 				@media @media-point-md1 {
-					min-height: ~"calc(100vh - @{navbar-sm} - @{footer_device_sm_l} -  @{navbar-bottom})";
+					min-height: ~"calc(100vh - @{navbar_sm} - @{footer_device_sm_l} -  @{navbar_bottom})";
 				}
 				@media @media-point-md2 {	
-					min-height: ~"calc(100vh - @{navbar-md} - @{footer_screen_md} - @{navbar-bottom-tabs} - @{navbar-bottom})"; 
+					min-height: ~"calc(100vh - @{navbar_md} - @{footer_screen_md} - @{navbar_bottom_tabs} - @{navbar_bottom})"; 
 				}
 			}
 		}
@@ -883,6 +883,402 @@
 		}
 	}
 }
+.container {
+	.container-fixed();
+	width: 100%;
+	@media @media-point-screen{width: 95vw;}
+	@media @media-point-xxl{width: 85vw; max-width: @b-container;}
+	&.is--default-page{
+		@media @media-point-screen {
+			max-width: @b-container-default;
+		}
+	}
+} 
+
+.container-fluid {
+	.container-fixed();	
+	padding-left: 40px;
+	padding-right: 40px; 
+}
+.row {
+	.make-row();
+	&.is--nowrap{flex-wrap: nowrap;}
+	//justify-content	
+	&.is--jcfs{justify-content: flex-start;}
+	&.is--jcfe{justify-content: flex-end;}
+	&.is--jcsb{justify-content: space-between;}
+	&.is--jcsa{justify-content: space-around;}
+	&.is--jcc{justify-content: center;}
+	//align-items
+	&.is--aic{align-items: center;}
+	&.is--aife{align-items: flex-end;}
+	&.is--gutter{
+		margin-top: -30px;
+		> .cols{
+			padding-top: 30px;
+		}
+	}
+	&.is--gutter15{
+		margin-top: -15px;
+		> .cols{
+			padding-top: 15px;
+		}
+	}
+	&.is--gutter10{
+		margin-top: -10px;
+		> .cols{
+			padding-top: 10px;
+		}
+	}
+	&.is--gap-lg{
+		@media @media-point-xxl {		
+			margin-left: -1.5vw;
+			margin-right: -1.5vw;
+			> .cols{		
+				padding-left: 1.5vw;
+				padding-right: 1.5vw;
+			}	
+		}
+	}
+}
+.cols {
+	.make-cols();
+	//grid
+	&.is--grid-1{
+		.makeCols(12, 12);
+	}
+	&.is--grid-2{
+		.makeCols(12, 12);
+		@media @media-point-xs {
+			.makeCols(6, 12);
+		}
+		@media @media-point-notsmart {
+			.makeCols(6, 12);
+		}
+	}
+	&.is--grid-3{
+		.makeCols(12, 12);
+		@media @media-point-xs {
+			.makeCols(6, 12);
+		}
+		@media @media-point-tablet {
+			.makeCols(6, 12);
+		}
+		@media @media-point-screen {
+			.makeCols(4, 12);
+		}
+	}
+	&.is--grid-4{
+		.makeCols(12, 12);
+		@media @media-point-xs {
+			.makeCols(6, 12);
+		}
+		@media @media-point-sm {
+			.makeCols(6, 12);
+		}
+		@media @media-point-md {
+			.makeCols(3, 12);
+		}
+		@media @media-point-screen {
+			.makeCols(3, 12);
+		}
+	}
+	&.is--grid-5{
+		.makeCols(12, 12);
+		@media @media-point-xs {
+			.makeCols(6, 12);
+		}
+		@media @media-point-tablet {
+			.makeCols(4, 12);
+		}
+		@media @media-point-screen {
+			.makeCols(2.4, 12);
+		}
+	}
+	&.is--grid-6{
+		.makeCols(12, 12);
+		@media @media-point-xs {
+			.makeCols(6, 12);
+		}
+		@media @media-point-tablet {
+			.makeCols(4, 12);
+		}
+		@media @media-point-md2 {
+			.makeCols(4, 12);
+		}
+		@media @media-point-screen-lg {
+			.makeCols(2, 12);
+		}
+	}
+	//notsmart
+	&.is--cols-1{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(1, 12);}
+	}	
+	&.is--cols-2{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(2, 12);}
+	}
+	&.is--cols-3{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(3, 12);}
+	}
+	&.is--cols-4{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(4, 12);}
+	}
+	&.is--cols-5{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(5, 12);}
+	}
+	&.is--cols-6{
+		.makeCols(12, 12);
+		@media @media-point-notsmart {.makeCols(6, 12);}
+	}
+	&.is--cols-7{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(7, 12);}
+	}
+	&.is--cols-8{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(8, 12);}
+	}
+	&.is--cols-9{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(9, 12);}
+	}
+	&.is--cols-10{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(10, 12);}
+	}
+	&.is--cols-11{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(11, 12);}
+	}
+	&.is--cols-12{
+		.makeCols(12, 12);		
+		@media @media-point-notsmart {.makeCols(12, 12);}
+	}
+	//screen
+	&.is--cols-screen-1{		
+		@media @media-point-screen {.makeCols(1, 12);}
+	}	
+	&.is--cols-screen-2{		
+		@media @media-point-screen {.makeCols(2, 12);}
+	}
+	&.is--cols-screen-3{		
+		@media @media-point-screen {.makeCols(3, 12);}
+	}
+	&.is--cols-screen-4{		
+		@media @media-point-screen {.makeCols(4, 12);}
+	}
+	&.is--cols-screen-5{		
+		@media @media-point-screen {.makeCols(5, 12);}
+	}
+	&.is--cols-screen-6{		
+		@media @media-point-screen {.makeCols(6, 12);}
+	}
+	&.is--cols-screen-7{		
+		@media @media-point-screen {.makeCols(7, 12);}
+	}
+	&.is--cols-screen-8{		
+		@media @media-point-screen {.makeCols(8, 12);}
+	}
+	&.is--cols-screen-9{		
+		@media @media-point-screen {.makeCols(9, 12);}
+	}
+	&.is--cols-screen-10{		
+		@media @media-point-screen{.makeCols(10, 12);}
+	}
+	&.is--cols-screen-11{		
+		@media @media-point-screen{.makeCols(11, 12);}
+	}
+	&.is--cols-screen-12{	
+		@media @media-point-screen {.makeCols(12, 12);}
+	}
+	//sm
+	&.is--cols-sm-1{		
+		@media @media-point-sm{.makeCols(1, 12);}
+	}	
+	&.is--cols-sm-2{		
+		@media @media-point-sm{.makeCols(2, 12);}
+	}
+	&.is--cols-sm-3{		
+		@media @media-point-sm{.makeCols(3, 12);}
+	}
+	&.is--cols-sm-4{		
+		@media @media-point-sm{.makeCols(4, 12);}
+	}
+	&.is--cols-sm-5{		
+		@media @media-point-sm{.makeCols(5, 12);}
+	}
+	&.is--cols-sm-6{		
+		@media @media-point-sm{.makeCols(6, 12);}
+	}
+	&.is--cols-sm-7{		
+		@media @media-point-sm{.makeCols(7, 12);}
+	}
+	&.is--cols-sm-8{		
+		@media @media-point-sm{.makeCols(8, 12);}
+	}
+	&.is--cols-sm-9{		
+		@media @media-point-sm{.makeCols(9, 12);}
+	}
+	&.is--cols-sm-10{		
+		@media @media-point-sm{.makeCols(10, 12);}
+	}
+	&.is--cols-sm-11{		
+		@media @media-point-sm{.makeCols(11, 12);}
+	}
+	&.is--cols-sm-12{	
+		@media @media-point-sm{.makeCols(12, 12);}
+	}
+	//md1
+	&.is--cols-md-1{		
+		@media @media-point-md1 {.makeCols(1, 12);}
+	}	
+	&.is--cols-md-2{		
+		@media @media-point-md1 {.makeCols(2, 12);}
+	}
+	&.is--cols-md-3{		
+		@media @media-point-md1 {.makeCols(3, 12);}
+	}
+	&.is--cols-md-4{		
+		@media @media-point-md1 {.makeCols(4, 12);}
+	}
+	&.is--cols-md-5{		
+		@media @media-point-md1 {.makeCols(5, 12);}
+	}
+	&.is--cols-md-6{		
+		@media @media-point-md1 {.makeCols(6, 12);}
+	}
+	&.is--cols-md-7{		
+		@media @media-point-md1 {.makeCols(7, 12);}
+	}
+	&.is--cols-md-8{		
+		@media @media-point-md1 {.makeCols(8, 12);}
+	}
+	&.is--cols-md-9{		
+		@media @media-point-md1 {.makeCols(9, 12);}
+	}
+	&.is--cols-md-10{		
+		@media @media-point-md1{.makeCols(10, 12);}
+	}
+	&.is--cols-md-11{		
+		@media @media-point-md1{.makeCols(11, 12);}
+	}
+	&.is--cols-md-12{	
+		@media @media-point-md1 {.makeCols(12, 12);}
+	}
+	//xxs
+	&.is--cols-xxs-1{		
+		@media @media-point-xxs {.makeCols(1, 12);}
+	}	
+	&.is--cols-xxs-2{		
+		@media @media-point-xxs {.makeCols(2, 12);}
+	}
+	&.is--cols-xxs-3{		
+		@media @media-point-xxs {.makeCols(3, 12);}
+	}
+	&.is--cols-xxs-4{		
+		@media @media-point-xxs {.makeCols(4, 12);}
+	}
+	&.is--cols-xxs-5{		
+		@media @media-point-xxs {.makeCols(5, 12);}
+	}
+	&.is--cols-xxs-6{		
+		@media @media-point-xxs {.makeCols(6, 12);}
+	}
+	&.is--cols-xxs-7{		
+		@media @media-point-xxs {.makeCols(7, 12);}
+	}
+	&.is--cols-xxs-8{		
+		@media @media-point-xxs {.makeCols(8, 12);}
+	}
+	&.is--cols-xxs-9{		
+		@media @media-point-xxs {.makeCols(9, 12);}
+	}
+	&.is--cols-xxs-10{		
+		@media @media-point-xxs{.makeCols(10, 12);}
+	}
+	&.is--cols-xxs-11{		
+		@media @media-point-xxs{.makeCols(11, 12);}
+	}
+	&.is--cols-xxs-12{	
+		@media @media-point-xxs {.makeCols(12, 12);}
+	}
+	//xs
+	&.is--cols-xs-1{		
+		@media @media-point-xs {.makeCols(1, 12);}
+	}	
+	&.is--cols-xs-2{		
+		@media @media-point-xs {.makeCols(2, 12);}
+	}
+	&.is--cols-xs-3{		
+		@media @media-point-xs {.makeCols(3, 12);}
+	}
+	&.is--cols-xs-4{		
+		@media @media-point-xs {.makeCols(4, 12);}
+	}
+	&.is--cols-xs-5{		
+		@media @media-point-xs {.makeCols(5, 12);}
+	}
+	&.is--cols-xs-6{		
+		@media @media-point-xs {.makeCols(6, 12);}
+	}
+	&.is--cols-xs-7{		
+		@media @media-point-xs {.makeCols(7, 12);}
+	}
+	&.is--cols-xs-8{		
+		@media @media-point-xs {.makeCols(8, 12);}
+	}
+	&.is--cols-xs-9{		
+		@media @media-point-xs {.makeCols(9, 12);}
+	}
+	&.is--cols-xs-10{		
+		@media @media-point-xs{.makeCols(10, 12);}
+	}
+	&.is--cols-xs-11{		
+		@media @media-point-xs{.makeCols(11, 12);}
+	}
+	&.is--cols-xs-12{	
+		@media @media-point-xs {.makeCols(12, 12);}
+	}
+	//offset
+	&.is--offset-1{
+		@media @media-point-screen{.makeColsOffset(1, 12)}
+	}	
+	&.is--offset-2{
+		@media @media-point-screen{.makeColsOffset(2, 12)}
+	}
+	&.is--offset-3{
+		@media @media-point-screen{.makeColsOffset(3, 12)}
+	}
+	&.is--offset-4{
+		@media @media-point-screen{.makeColsOffset(4, 12)}
+	}
+	&.is--offset-5{
+		@media @media-point-screen{.makeColsOffset(5, 12)}
+	}
+	&.is--offset-6{
+		@media @media-point-screen{.makeColsOffset(6, 12)}
+	}
+	&.is--offset-7{
+		@media @media-point-screen{.makeColsOffset(7, 12)}
+	}
+	&.is--offset-8{
+		@media @media-point-screen{.makeColsOffset(8, 12)}
+	}
+	&.is--offset-9{
+		@media @media-point-screen{.makeColsOffset(9, 12)}
+	}
+	&.is--offset-10{
+		@media @media-point-screen{.makeColsOffset(10, 12)}
+	}
+	&.is--offset-11{
+		@media @media-point-screen{.makeColsOffset(11, 12)}
+	}
+}
 .form-panel__{
 	&block{
 		position: relative;
@@ -1332,402 +1728,6 @@
 	border: 1px solid #999;
 	display: none;
 }
-.container {
-	.container-fixed();
-	width: 100%;
-	@media @media-point-screen{width: 95vw;}
-	@media @media-point-xxl{width: 85vw; max-width: @b-container;}
-	&.is--default-page{
-		@media @media-point-screen {
-			max-width: @b-container-default;
-		}
-	}
-} 
-
-.container-fluid {
-	.container-fixed();	
-	padding-left: 40px;
-	padding-right: 40px; 
-}
-.row {
-	.make-row();
-	&.is--nowrap{flex-wrap: nowrap;}
-	//justify-content	
-	&.is--jcfs{justify-content: flex-start;}
-	&.is--jcfe{justify-content: flex-end;}
-	&.is--jcsb{justify-content: space-between;}
-	&.is--jcsa{justify-content: space-around;}
-	&.is--jcc{justify-content: center;}
-	//align-items
-	&.is--aic{align-items: center;}
-	&.is--aife{align-items: flex-end;}
-	&.is--gutter{
-		margin-top: -30px;
-		> .cols{
-			padding-top: 30px;
-		}
-	}
-	&.is--gutter15{
-		margin-top: -15px;
-		> .cols{
-			padding-top: 15px;
-		}
-	}
-	&.is--gutter10{
-		margin-top: -10px;
-		> .cols{
-			padding-top: 10px;
-		}
-	}
-	&.is--gap-lg{
-		@media @media-point-xxl {		
-			margin-left: -1.5vw;
-			margin-right: -1.5vw;
-			> .cols{		
-				padding-left: 1.5vw;
-				padding-right: 1.5vw;
-			}	
-		}
-	}
-}
-.cols {
-	.make-cols();
-	//grid
-	&.is--grid-1{
-		.makeCols(12, 12);
-	}
-	&.is--grid-2{
-		.makeCols(12, 12);
-		@media @media-point-xs {
-			.makeCols(6, 12);
-		}
-		@media @media-point-notsmart {
-			.makeCols(6, 12);
-		}
-	}
-	&.is--grid-3{
-		.makeCols(12, 12);
-		@media @media-point-xs {
-			.makeCols(6, 12);
-		}
-		@media @media-point-tablet {
-			.makeCols(6, 12);
-		}
-		@media @media-point-screen {
-			.makeCols(4, 12);
-		}
-	}
-	&.is--grid-4{
-		.makeCols(12, 12);
-		@media @media-point-xs {
-			.makeCols(6, 12);
-		}
-		@media @media-point-sm {
-			.makeCols(6, 12);
-		}
-		@media @media-point-md {
-			.makeCols(3, 12);
-		}
-		@media @media-point-screen {
-			.makeCols(3, 12);
-		}
-	}
-	&.is--grid-5{
-		.makeCols(12, 12);
-		@media @media-point-xs {
-			.makeCols(6, 12);
-		}
-		@media @media-point-tablet {
-			.makeCols(4, 12);
-		}
-		@media @media-point-screen {
-			.makeCols(2.4, 12);
-		}
-	}
-	&.is--grid-6{
-		.makeCols(12, 12);
-		@media @media-point-xs {
-			.makeCols(6, 12);
-		}
-		@media @media-point-tablet {
-			.makeCols(4, 12);
-		}
-		@media @media-point-md2 {
-			.makeCols(4, 12);
-		}
-		@media @media-point-screen-lg {
-			.makeCols(2, 12);
-		}
-	}
-	//notsmart
-	&.is--cols-1{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(1, 12);}
-	}	
-	&.is--cols-2{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(2, 12);}
-	}
-	&.is--cols-3{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(3, 12);}
-	}
-	&.is--cols-4{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(4, 12);}
-	}
-	&.is--cols-5{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(5, 12);}
-	}
-	&.is--cols-6{
-		.makeCols(12, 12);
-		@media @media-point-notsmart {.makeCols(6, 12);}
-	}
-	&.is--cols-7{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(7, 12);}
-	}
-	&.is--cols-8{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(8, 12);}
-	}
-	&.is--cols-9{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(9, 12);}
-	}
-	&.is--cols-10{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(10, 12);}
-	}
-	&.is--cols-11{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(11, 12);}
-	}
-	&.is--cols-12{
-		.makeCols(12, 12);		
-		@media @media-point-notsmart {.makeCols(12, 12);}
-	}
-	//screen
-	&.is--cols-screen-1{		
-		@media @media-point-screen {.makeCols(1, 12);}
-	}	
-	&.is--cols-screen-2{		
-		@media @media-point-screen {.makeCols(2, 12);}
-	}
-	&.is--cols-screen-3{		
-		@media @media-point-screen {.makeCols(3, 12);}
-	}
-	&.is--cols-screen-4{		
-		@media @media-point-screen {.makeCols(4, 12);}
-	}
-	&.is--cols-screen-5{		
-		@media @media-point-screen {.makeCols(5, 12);}
-	}
-	&.is--cols-screen-6{		
-		@media @media-point-screen {.makeCols(6, 12);}
-	}
-	&.is--cols-screen-7{		
-		@media @media-point-screen {.makeCols(7, 12);}
-	}
-	&.is--cols-screen-8{		
-		@media @media-point-screen {.makeCols(8, 12);}
-	}
-	&.is--cols-screen-9{		
-		@media @media-point-screen {.makeCols(9, 12);}
-	}
-	&.is--cols-screen-10{		
-		@media @media-point-screen{.makeCols(10, 12);}
-	}
-	&.is--cols-screen-11{		
-		@media @media-point-screen{.makeCols(11, 12);}
-	}
-	&.is--cols-screen-12{	
-		@media @media-point-screen {.makeCols(12, 12);}
-	}
-	//sm
-	&.is--cols-sm-1{		
-		@media @media-point-sm{.makeCols(1, 12);}
-	}	
-	&.is--cols-sm-2{		
-		@media @media-point-sm{.makeCols(2, 12);}
-	}
-	&.is--cols-sm-3{		
-		@media @media-point-sm{.makeCols(3, 12);}
-	}
-	&.is--cols-sm-4{		
-		@media @media-point-sm{.makeCols(4, 12);}
-	}
-	&.is--cols-sm-5{		
-		@media @media-point-sm{.makeCols(5, 12);}
-	}
-	&.is--cols-sm-6{		
-		@media @media-point-sm{.makeCols(6, 12);}
-	}
-	&.is--cols-sm-7{		
-		@media @media-point-sm{.makeCols(7, 12);}
-	}
-	&.is--cols-sm-8{		
-		@media @media-point-sm{.makeCols(8, 12);}
-	}
-	&.is--cols-sm-9{		
-		@media @media-point-sm{.makeCols(9, 12);}
-	}
-	&.is--cols-sm-10{		
-		@media @media-point-sm{.makeCols(10, 12);}
-	}
-	&.is--cols-sm-11{		
-		@media @media-point-sm{.makeCols(11, 12);}
-	}
-	&.is--cols-sm-12{	
-		@media @media-point-sm{.makeCols(12, 12);}
-	}
-	//md1
-	&.is--cols-md-1{		
-		@media @media-point-md1 {.makeCols(1, 12);}
-	}	
-	&.is--cols-md-2{		
-		@media @media-point-md1 {.makeCols(2, 12);}
-	}
-	&.is--cols-md-3{		
-		@media @media-point-md1 {.makeCols(3, 12);}
-	}
-	&.is--cols-md-4{		
-		@media @media-point-md1 {.makeCols(4, 12);}
-	}
-	&.is--cols-md-5{		
-		@media @media-point-md1 {.makeCols(5, 12);}
-	}
-	&.is--cols-md-6{		
-		@media @media-point-md1 {.makeCols(6, 12);}
-	}
-	&.is--cols-md-7{		
-		@media @media-point-md1 {.makeCols(7, 12);}
-	}
-	&.is--cols-md-8{		
-		@media @media-point-md1 {.makeCols(8, 12);}
-	}
-	&.is--cols-md-9{		
-		@media @media-point-md1 {.makeCols(9, 12);}
-	}
-	&.is--cols-md-10{		
-		@media @media-point-md1{.makeCols(10, 12);}
-	}
-	&.is--cols-md-11{		
-		@media @media-point-md1{.makeCols(11, 12);}
-	}
-	&.is--cols-md-12{	
-		@media @media-point-md1 {.makeCols(12, 12);}
-	}
-	//xxs
-	&.is--cols-xxs-1{		
-		@media @media-point-xxs {.makeCols(1, 12);}
-	}	
-	&.is--cols-xxs-2{		
-		@media @media-point-xxs {.makeCols(2, 12);}
-	}
-	&.is--cols-xxs-3{		
-		@media @media-point-xxs {.makeCols(3, 12);}
-	}
-	&.is--cols-xxs-4{		
-		@media @media-point-xxs {.makeCols(4, 12);}
-	}
-	&.is--cols-xxs-5{		
-		@media @media-point-xxs {.makeCols(5, 12);}
-	}
-	&.is--cols-xxs-6{		
-		@media @media-point-xxs {.makeCols(6, 12);}
-	}
-	&.is--cols-xxs-7{		
-		@media @media-point-xxs {.makeCols(7, 12);}
-	}
-	&.is--cols-xxs-8{		
-		@media @media-point-xxs {.makeCols(8, 12);}
-	}
-	&.is--cols-xxs-9{		
-		@media @media-point-xxs {.makeCols(9, 12);}
-	}
-	&.is--cols-xxs-10{		
-		@media @media-point-xxs{.makeCols(10, 12);}
-	}
-	&.is--cols-xxs-11{		
-		@media @media-point-xxs{.makeCols(11, 12);}
-	}
-	&.is--cols-xxs-12{	
-		@media @media-point-xxs {.makeCols(12, 12);}
-	}
-	//xs
-	&.is--cols-xs-1{		
-		@media @media-point-xs {.makeCols(1, 12);}
-	}	
-	&.is--cols-xs-2{		
-		@media @media-point-xs {.makeCols(2, 12);}
-	}
-	&.is--cols-xs-3{		
-		@media @media-point-xs {.makeCols(3, 12);}
-	}
-	&.is--cols-xs-4{		
-		@media @media-point-xs {.makeCols(4, 12);}
-	}
-	&.is--cols-xs-5{		
-		@media @media-point-xs {.makeCols(5, 12);}
-	}
-	&.is--cols-xs-6{		
-		@media @media-point-xs {.makeCols(6, 12);}
-	}
-	&.is--cols-xs-7{		
-		@media @media-point-xs {.makeCols(7, 12);}
-	}
-	&.is--cols-xs-8{		
-		@media @media-point-xs {.makeCols(8, 12);}
-	}
-	&.is--cols-xs-9{		
-		@media @media-point-xs {.makeCols(9, 12);}
-	}
-	&.is--cols-xs-10{		
-		@media @media-point-xs{.makeCols(10, 12);}
-	}
-	&.is--cols-xs-11{		
-		@media @media-point-xs{.makeCols(11, 12);}
-	}
-	&.is--cols-xs-12{	
-		@media @media-point-xs {.makeCols(12, 12);}
-	}
-	//offset
-	&.is--offset-1{
-		@media @media-point-screen{.makeColsOffset(1, 12)}
-	}	
-	&.is--offset-2{
-		@media @media-point-screen{.makeColsOffset(2, 12)}
-	}
-	&.is--offset-3{
-		@media @media-point-screen{.makeColsOffset(3, 12)}
-	}
-	&.is--offset-4{
-		@media @media-point-screen{.makeColsOffset(4, 12)}
-	}
-	&.is--offset-5{
-		@media @media-point-screen{.makeColsOffset(5, 12)}
-	}
-	&.is--offset-6{
-		@media @media-point-screen{.makeColsOffset(6, 12)}
-	}
-	&.is--offset-7{
-		@media @media-point-screen{.makeColsOffset(7, 12)}
-	}
-	&.is--offset-8{
-		@media @media-point-screen{.makeColsOffset(8, 12)}
-	}
-	&.is--offset-9{
-		@media @media-point-screen{.makeColsOffset(9, 12)}
-	}
-	&.is--offset-10{
-		@media @media-point-screen{.makeColsOffset(10, 12)}
-	}
-	&.is--offset-11{
-		@media @media-point-screen{.makeColsOffset(11, 12)}
-	}
-}
 .header-block__{
 	&block{
 		position: relative;
@@ -1738,8 +1738,8 @@
 		padding-top: 20px;
 		padding-bottom: 20px;
 		@media @media-point-screen-lg {
-			padding-top: @navbar-screen;
-			padding-bottom: @navbar-screen;
+			padding-top: @navbar_screen;
+			padding-bottom: @navbar_screen;
 			background-attachment: fixed;
 			max-height: 960px;
 			height: 100vh;
@@ -1975,14 +1975,14 @@
 }
 .navbar__{
 	&block{
-		color: @navbar-color-device;
+		color: @navbar_color_device;
 		position: fixed;
 		width: 100%;
 		z-index: 100;
 		top: 0;
 		left: 0;
 		@media @media-point-screen-lg {
-			color: @navbar-color;
+			color: @navbar_color;
 			position: absolute;
 			&.opacity{
 				opacity: 0;
@@ -2006,21 +2006,21 @@
 	&inner{		
 		padding-top: 10px;
 		padding-bottom: 10px; 
-		background: @navbar-bg-device;
+		background: @navbar_bg_device;
 		@media @media-point-screen-lg {			
-			background-color: @navbar-bg-screen;
+			background-color: @navbar_bg_screen;
 			padding-top: 0;
 			padding-bottom: 0;
 			.navbar-site.opacity &{
-				background: @navbar-bg-screen-hover;
+				background: @navbar_bg_screen_hover;
 				//padding-top: 10px;
 				//padding-bottom: 10px;
 			}
 			.navbar-site.is--index &{
-				background-color: fadeout(@navbar-bg-screen, 100%);
+				background-color: fadeout(@navbar_bg_screen, 100%);
 			}
 			.navbar-site.is--index.opacity &{
-				background: @navbar-bg-screen-hover;
+				background: @navbar_bg_screen_hover;
 			}
 		}
 	}
@@ -2043,32 +2043,32 @@
 	}
 	&logotip{
 		position: relative;
-		&, &:hover, &:focus{color: @navbar-logo-color;}		
+		&, &:hover, &:focus{color: @navbar_logo_color;}		
 		display: block;
 		width: 100%;
 		transition: none;
-		max-width: @navbar-logo-device-widht;
-		height: @navbar-logo-device-height;
+		max-width: @navbar_logo_device_widht;
+		height: @navbar_logo_device_height;
 		img{width: 100%;}
 		@media @media-point-screen-lg {
-			max-width: @navbar-logo-widht;
-			height: @navbar-logo-height;	
+			max-width: @navbar_logo_widht;
+			height: @navbar_logo_height;	
 		}
 	}
 	//collapse
 	&collapse{
 		@media @media-point-device-lg{
 			position: fixed;
-			top: @navbar-device;
+			top: @navbar_device;
 			left: -270px;
 			width: 270px;
-			height: ~"calc(100vh - @{navbar-device})";
+			height: ~"calc(100vh - @{navbar_device})";
 			opacity: 0;
 		    visibility: hidden;
 		    transition: @trs-site;
-		    background: @navbar-bg-device;		    
+		    background: @navbar_bg_device;		    
 		    .navbar-site.opacity &{
-		    	background: @navbar-bg-device;
+		    	background: @navbar_bg_device;
 		    }
 		    &.is--open{
 		    	visibility: visible;
@@ -2081,8 +2081,8 @@
 			width: 100%;
 		}
 		@media @media-point-md2{
-			top: @navbar-md;
-	    	//background: @navbar-bg-screen;
+			top: @navbar_md;
+	    	//background: @navbar_bg_screen;
 		}
 		@media @media-point-screen-lg{
 			display: block;
@@ -2164,15 +2164,15 @@
 		//text-transform: uppercase;
 		margin-left: -(@gutter);
 		margin-right: -(@gutter);
-		font-size: @navbar-fs + 4;
-		line-height: @navbar-lh + 6;
+		font-size: @navbar_fs + 4;
+		line-height: @navbar_lh + 6;
 		@media @media-point-device-lg{
 			flex-wrap: wrap;
 		}
 		@media @media-point-screen-lg {
 			justify-content: center;
-			//font-size: @navbar-fs + 4;
-			line-height: @navbar-lh + 2;
+			//font-size: @navbar_fs + 4;
+			line-height: @navbar_lh + 2;
 			.calcFontSize(16, 20, 1200, 1680);
 			.calcLineHeight(22, 26, 320, 1680);
 			margin-left: -(@gutter_screen);
@@ -2211,7 +2211,7 @@
     	position: relative;
 		transition: @trs-site;
 		font-weight: 400;
-		color: @navbar-color-device;
+		color: @navbar_color_device;
 	    display: inline-block;
 		@media @media-point-device-lg{
 		    .navbar__nav-item.dropdown &{
@@ -2220,7 +2220,7 @@
 		@media @media-point-screen-lg{
 			display: block;
 			text-align: center;
-			color: @navbar-color;
+			color: @navbar_color;
 			padding: 5px 0;
 		}
 		&::after{
@@ -2231,7 +2231,7 @@
 			left: 0;
 			width: 100%;
 			height: 2px;
-			background-color: @navbar-active-bg;
+			background-color: @navbar_active_bg;
 			transform-origin: right;
 			transition: transform @trs-option;
 			transform: scale(0, 1);
@@ -2246,9 +2246,9 @@
 			//transition: @trs-btn; 
 		}
 		&:hover{
-			color: @navbar-color-hover;
+			color: @navbar_color_hover;
 			@media @media-point-screen-lg{
-				//background-color: @navbar-active-bg;
+				//background-color: @navbar_active_bg;
 			}
 			&::after{
 				transform-origin: left;
@@ -2265,7 +2265,7 @@
 		.navbar__nav-item.open &,
 		.navbar__nav-item.is--active &{			
 			cursor: default;
-			color: @navbar-active-color;
+			color: @navbar_active_color;
 			&::after{
 				transform: scale(1, 1);
 			}	
@@ -2287,7 +2287,7 @@
 		.navbar__nav-item.open &{
 			transform: translateY(-50%) rotate(180deg);
 			@media @media-point-screen-lg {
-				color: @navbar-active-color;
+				color: @navbar_active_color;
 			}
 		}
 	}
@@ -2311,7 +2311,7 @@
 			top: 100%;
 		    margin: 0;
 			min-width: 180px;
-			background-color: @navbar-collapse-bg;	
+			background-color: @navbar_collapse_bg;	
 			display: block;
 			transform-origin: 0 0;
     		transform: translateY(-150%);
@@ -2375,15 +2375,15 @@
 		display: inline-block;
 		transition: @trs-site;
     	position: relative;
-		color: @navbar-color;
+		color: @navbar_color;
     	z-index: 1;
 		padding: 0 0 0 20px; 
-		font-size: @navbar-fs + 0;
-		line-height: @navbar-lh - 0;
+		font-size: @navbar_fs + 0;
+		line-height: @navbar_lh - 0;
 		@media @media-point-screen-lg {
-			//font-size: @navbar-fs + 2;
-			//line-height: @navbar-lh - 2;
-			color: @navbar-collapse-color;
+			//font-size: @navbar_fs + 2;
+			//line-height: @navbar_lh - 2;
+			color: @navbar_collapse_color;
 			.calcFontSize(16, 18, 1200, 1680);
 			.calcLineHeight(20, 22, 320, 1680);
 		}
@@ -2404,7 +2404,7 @@
 		}
 		.navbar__nav-dropdown-item.is--active &,
 		&:hover{
-			color: @navbar-collapse-color-hover;
+			color: @navbar_collapse_color_hover;
 		}
 		.navbar__nav-dropdown-item.is--active &{
 			cursor: default;
@@ -2428,7 +2428,7 @@
 		.navbar__nav-item.open &,
 		.navbar__nav-item.is--active &{	
 			@media @media-point-screen-lg {
-				color: @navbar-active-color;		
+				color: @navbar_active_color;		
 			}
 		}	
 	}
@@ -2484,8 +2484,8 @@
 		display: block
 	}
 	&hamburger-card-inner{		
-		width: @navbar-humb-width;
-		height: @navbar-humb-width;
+		width: @navbar_humb_width;
+		height: @navbar_humb_width;
 		padding: 10px 5px;
 		display: flex;
   		//flex-direction: column;
@@ -2498,12 +2498,12 @@
 		width: 100%;
 		height: 3px;
 		transition: @trs-site;
-		background-color: @navbar-humb-bg;
+		background-color: @navbar_humb_bg;
 		border-radius: 3px;
     	position: relative;
 		transition: @trs-site;
 		.navbar__hamburger-card.is--active &{
-			background-color: @navbar-humb-bg-active;
+			background-color: @navbar_humb_bg_active;
 		}				
 		&.is--left{
 			.navbar__hamburger-card.is--active &{				
@@ -2583,15 +2583,15 @@
 	&block{
 		background-color: @white;
 		@media @media-point-device-lg {
-			background: @navbar-bg-device;	
+			background: @navbar_bg_device;	
 			background: @b-color-a;	
 			position: fixed;
 			left: 0;
 			width: 100%;
-			height: ~"calc(100% - @{navbar-device})";
+			height: ~"calc(100% - @{navbar_device})";
 			z-index: 95;
 			bottom: 0;
-			transform: translateY(~"calc(100% - @{navbar-bottom})");
+			transform: translateY(~"calc(100% - @{navbar_bottom})");
 			transition: @trs-site;
 		    //transition: all 0.55s cubic-bezier(0.5, 0.5, 0, 1);
 			overflow: hidden;
@@ -2742,7 +2742,7 @@
 	} 
 	&dropdown{
 		position: relative;
-		height: ~"calc(100% - @{navbar-bottom})";
+		height: ~"calc(100% - @{navbar_bottom})";
 		padding-left: 15px;
     	padding-right: 15px;    
     	margin-right: auto;
@@ -3034,53 +3034,6 @@
 		}
 	}
 }*/
-.pagination__{
-	&block{
-		padding-bottom: 30px;
-	}
-	&list{
-		list-style: none;
-		margin-top: -(@pagin_gutter + 5px);
-		margin-left: -(@pagin_gutter);
-		margin-right: -(@pagin_gutter);
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		//
-		&.is--center{
-			justify-content: center; 
-		}
-	} 
-	&item{
-		padding-top: @pagin_gutter + 5px;
-		padding-left: @pagin_gutter;
-		padding-right: @pagin_gutter; 
-	}
-	&link{
-		display: block;
-		position: relative;
-		z-index: 1;
-		color: @pagin_color;
-		text-align: center;
-		position: relative;
-		z-index: 1;
-		border-radius: 50%;
-		padding: 0 8px;
-		font-size: @b-fs;
-		line-height: @b-lh + 12;
-		width: 36px;
-		&:hover{	
-			color: @pagin_color_hover;			
-			background-color: @pagin_bg_hover;
-		}
-		.pagination__item.is--active &{
-			color: @pagin_color_active;	
-			font-weight: 700;	
-			cursor: default;
-			background-color: @pagin_bg_active;
-		}
-	}
-}
 .page-header__{	
 	&panel{}	
 	&container{}
@@ -3170,6 +3123,53 @@
 				width: 40px;
 				height: 40px;
 			}			
+		}
+	}
+}
+.pagination__{
+	&block{
+		padding-bottom: 30px;
+	}
+	&list{
+		list-style: none;
+		margin-top: -(@pagin_gutter + 5px);
+		margin-left: -(@pagin_gutter);
+		margin-right: -(@pagin_gutter);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		//
+		&.is--center{
+			justify-content: center; 
+		}
+	} 
+	&item{
+		padding-top: @pagin_gutter + 5px;
+		padding-left: @pagin_gutter;
+		padding-right: @pagin_gutter; 
+	}
+	&link{
+		display: block;
+		position: relative;
+		z-index: 1;
+		color: @pagin_color;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+		border-radius: 50%;
+		padding: 0 8px;
+		font-size: @b-fs;
+		line-height: @b-lh + 12;
+		width: 36px;
+		&:hover{	
+			color: @pagin_color_hover;			
+			background-color: @pagin_bg_hover;
+		}
+		.pagination__item.is--active &{
+			color: @pagin_color_active;	
+			font-weight: 700;	
+			cursor: default;
+			background-color: @pagin_bg_active;
 		}
 	}
 }
@@ -3598,24 +3598,12 @@
 		//border-radius: @soc_border_radius;
 		//padding: 6px;
 		@media @media-point-screen-lg {
-			width: @soc_size - 14;
-			height: @soc_size - 14;	
-			//padding: 4px;		
+			width: @soc_size - 8;
+			height: @soc_size - 8;
 		}
 		&, &:focus{color: @soc_color;} 
 		svg{display: block;}
-		&.is--footer{			
-			@media @media-point-screen {
-				width: @soc_size - 8;
-				height: @soc_size - 8;
-				//padding: 5px;
-			}
-			@media @media-point-md2 {
-				//width: @soc_size - 6;
-				//height: @soc_size - 6;
-				//padding: 4px;
-
-			}
+		&.is--footer{
 		}
 		&.is--vk{
 			&:hover{
