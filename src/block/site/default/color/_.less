@@ -1,28 +1,34 @@
 .color-panel__{
-	&bg{
+	&card-color{
 		width: 100px;
 		height: 100px;
 		margin-bottom: 10px;
 		border: 1px solid;
-		border-radius: 50%;
+		border-radius: @b_rad; 
 	}
-	&heading{
+	&card-name{
 		font-size: @b-fs - 4;
 		line-height: @b-lh - 4;
 	}
 }
-.color{
-	&--black 			{color: @black}
-	&--black-33 		{color: @black-33}
-	&--black-b5 		{color: @black-b5}
-	&--white 			{color: @white}
-	&--orange 			{color: @orange}
-	&--yellow 			{color: @yellow}
+.color--{
+	&white 			{color: @white!important}
+	&black 			{color: @black!important}
+	&default 		{color: @default!important}
+	&primary 		{color: @primary!important}
+	&success 		{color: @success!important}
+	&info 			{color: @info!important}
+	&warning 		{color: @warning!important}
+	&danger 		{color: @danger!important}
 
-	&--bg-black 		{background-color: @black}
-	&--bg-black-33 		{background-color: @black-33}
-	&--bg-black-b5 		{background-color: @black-b5}
-	&--bg-white 		{background-color: @white}
-	&--bg-orange 		{background-color: @orange}
-	&--bg-yellow 		{background-color: @yellow}	
+	&bg-{
+		&white 		{background-color: @white}
+		&black 		{background-color: @black}
+		&default 	{background-color: @default}
+		&primary 	{background-color: @primary}	
+		&success 	{background-color: @success}	
+		&info 		{background-color: @info}
+		&warning 	{background-color: @warning}
+		&danger 	{background-color: @danger}
+	}
 }

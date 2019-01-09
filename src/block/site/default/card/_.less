@@ -42,7 +42,7 @@
 		display: flex;
 		align-items: center;
 		padding: 20px;
-		background-color: fadeout(@b-color-a-hover, 10%);
+		background-color: fadeout(@success, 10%);
 		@media @media-point-screen {
 			padding: 2.5vw;
 		}
@@ -73,11 +73,11 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: fadeout(@b-color-a, 30%);
+				background-color: fadeout(@primary, 30%);
 			}
 			.content-block__cols:nth-child(2n + 2) &{
 				&::before{
-					background-color: fadeout(@b-block-bg, 30%);
+					background-color: fadeout(@info, 30%);
 				}
 			}
 		}
@@ -90,7 +90,7 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: fadeout(@b-color-a, 80%);
+				background-color: fadeout(@primary, 80%);
 			}
 		}
 		&.is--adv{
@@ -98,7 +98,7 @@
 			margin-right: auto;
 			width: 66px;
 			height: 60px;
-			color: @b-color-a;
+			color: @primary;
 			margin-bottom: 15px;
 			@media @media-point-screen-lg {
 				width: 86px;
@@ -126,7 +126,7 @@
 		transition: @trs-site;
 		&.is--adv{
 			.heading5();
-			color: @b-color-h;
+			color: @warning;
 			font-weight: 400;	
 			text-align: center;		
 		}
@@ -169,17 +169,17 @@
 			.heading5();
 			margin-bottom: 15px;
 			a{
-				color: @b-color-h;
+				color: @warning;
 				.card-item__card:hover &,
 				.card-item__card.is--active &{
-					color: @b-color-a-hover;
+					color: @success;
 				}
 			}
 		}
 		&.is--reviews{
 			.heading5();
 			font-weight: 700;
-			color: @b-color-h;
+			color: @warning;
 			margin-bottom: 0;
 		}
 	}
@@ -189,7 +189,7 @@
 	&line{
 		flex-grow: 1;
 		margin: 0 15px;
-		border-bottom: 2px dotted @b-block-bg;
+		border-bottom: 2px dotted @info;
 		@media @media-point-xxs {
 			display: none;
 		}
@@ -202,7 +202,7 @@
 		}
 		&.is--reviews{
 			margin-bottom: 0;
-			color: @b-color-h;
+			color: @warning;
 			font-weight: 400;
 		}
 	}

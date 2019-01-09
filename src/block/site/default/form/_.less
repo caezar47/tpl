@@ -1,14 +1,3 @@
-.form-panel__{
-	&block{
-		position: relative;
-	}
-	&container{
-		position: relative;
-		z-index: 2;
-	}
-	&inner{}
-	&btn{}
-}
 .form__{
 	&block{
 		&.is--block{
@@ -195,6 +184,12 @@
 					background-color: fadeout(@input_w_bg, 0%);
 				}
 			}
+		}
+	}
+	&text{
+		&.is--agreement{
+			font-size: @input_t_fs - 4;
+			line-height: @input_t_lh - 6;
 		}
 	}
 	//radio	
