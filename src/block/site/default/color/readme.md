@@ -1,4 +1,4 @@
-## [Палитра](/src/block/site/default/color/readme.md) 
+## [Палитра](/src/block/site/default/color) 
 ##### Префикс `color--`
 ##### Цвет текста / Цвет фона (Классы):
 * `color--default` / `color--bg-default`

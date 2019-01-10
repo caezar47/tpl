@@ -36,15 +36,15 @@
 			background-color: @navbar_bg_screen;
 			padding-top: 0;
 			padding-bottom: 0;
-			.navbar-site.opacity &{
+			.navbar__block.opacity &{
 				background: @navbar_bg_screen_hover;
 				//padding-top: 10px;
 				//padding-bottom: 10px;
 			}
-			.navbar-site.is--index &{
+			.navbar__block.is--index &{
 				background-color: fadeout(@navbar_bg_screen, 100%);
 			}
-			.navbar-site.is--index.opacity &{
+			.navbar__block.is--index.opacity &{
 				background: @navbar_bg_screen_hover;
 			}
 		}
@@ -92,7 +92,7 @@
 		    visibility: hidden;
 		    transition: @trs-site;
 		    background: @navbar_bg_device;		    
-		    .navbar-site.opacity &{
+		    .navbar__block.opacity &{
 		    	background: @navbar_bg_device;
 		    }
 		    &.is--open{
@@ -117,10 +117,10 @@
 			padding-top: 23px;
 			padding-bottom: 23px;
 			 			
-			.navbar-site.is--index &{
+			.navbar__block.is--index &{
 				border-bottom: 2px solid @white;
 			}
-			.navbar-site.is--index.opacity &{
+			.navbar__block.is--index.opacity &{
 				border-bottom: 2px solid fadeout(@b-color-a, 100%);
 			}
 		}		

@@ -9,14 +9,21 @@
 		padding: 20px 3vw;
 	}
 }
-.btn-lg(){
+.btn-xl(){
 	@media @media-point-screen {
-		padding: 15px 3vw;
+		padding: 17px 3vw;
 	}
 }
 .btn-sm(){
 	@media @media-point-screen {
-		padding: 12px 3vw;
+		padding: 12px 1.3vw;
+	}
+}
+.btn-xs(){
+	font-size: @btn_fs - 2;
+	line-height: @btn_lh - 2;
+	@media @media-point-screen {
+		padding: 8px 1vw;
 	}
 }
 .btn__{
@@ -65,11 +72,14 @@
 				width: 100%;
 			}
 		}	
-		&.is--lg{
-			.btn-lg();
+		&.is--xl{
+			.btn-xl();
 		}	
 		&.is--sm{
 			.btn-sm();
+		}	
+		&.is--xs{
+			.btn-xs();
 		}
 	}
 	&name{}

@@ -1,4 +1,4 @@
-## [Заголовки](/src/block/site/default/page-header/readme.md) 
+## [Заголовки](/src/block/site/default/page-header) 
 ##### Префикс `page-header__`
 ##### Классы:
 * `page-header__group` (контейнер-обертка блока)

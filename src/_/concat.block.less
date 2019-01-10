@@ -281,14 +281,21 @@
 		padding: 20px 3vw;
 	}
 }
-.btn-lg(){
+.btn-xl(){
 	@media @media-point-screen {
-		padding: 15px 3vw;
+		padding: 17px 3vw;
 	}
 }
 .btn-sm(){
 	@media @media-point-screen {
-		padding: 12px 3vw;
+		padding: 12px 1.3vw;
+	}
+}
+.btn-xs(){
+	font-size: @btn_fs - 2;
+	line-height: @btn_lh - 2;
+	@media @media-point-screen {
+		padding: 8px 1vw;
 	}
 }
 .btn__{
@@ -337,11 +344,14 @@
 				width: 100%;
 			}
 		}	
-		&.is--lg{
-			.btn-lg();
+		&.is--xl{
+			.btn-xl();
 		}	
 		&.is--sm{
 			.btn-sm();
+		}	
+		&.is--xs{
+			.btn-xs();
 		}
 	}
 	&name{}
@@ -2015,15 +2025,15 @@
 			background-color: @navbar_bg_screen;
 			padding-top: 0;
 			padding-bottom: 0;
-			.navbar-site.opacity &{
+			.navbar__block.opacity &{
 				background: @navbar_bg_screen_hover;
 				//padding-top: 10px;
 				//padding-bottom: 10px;
 			}
-			.navbar-site.is--index &{
+			.navbar__block.is--index &{
 				background-color: fadeout(@navbar_bg_screen, 100%);
 			}
-			.navbar-site.is--index.opacity &{
+			.navbar__block.is--index.opacity &{
 				background: @navbar_bg_screen_hover;
 			}
 		}
@@ -2071,7 +2081,7 @@
 		    visibility: hidden;
 		    transition: @trs-site;
 		    background: @navbar_bg_device;		    
-		    .navbar-site.opacity &{
+		    .navbar__block.opacity &{
 		    	background: @navbar_bg_device;
 		    }
 		    &.is--open{
@@ -2096,10 +2106,10 @@
 			padding-top: 23px;
 			padding-bottom: 23px;
 			 			
-			.navbar-site.is--index &{
+			.navbar__block.is--index &{
 				border-bottom: 2px solid @white;
 			}
-			.navbar-site.is--index.opacity &{
+			.navbar__block.is--index.opacity &{
 				border-bottom: 2px solid fadeout(@b-color-a, 100%);
 			}
 		}		

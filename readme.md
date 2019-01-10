@@ -1,4 +1,21 @@
-## [Палитра](/src/block/site/default/color/readme.md) 
+## [Кнопки и ссылки](/src/block/site/default/button) 
+### Кнопки
+##### Префикс `btn__`
+##### Классы:
+* `btn__item`
+ 
+##### Модификаторы `is--`:
+* `is--xl` (большой размер кнопки)
+* `is--sm` (средний размер кнопки)
+* `is--xs` (малый размер кнопки)
+* `is--invers` (инверсный цвет кнопки)
+* `is--white` (светлый цвет кнопки кнопка)
+
+### Ссылки
+##### Префикс `link__`
+##### Классы `link__item` 
+
+## [Палитра](/src/block/site/default/color) 
 ##### Префикс `color--`
 ##### Цвет текста / Цвет фона (Классы):
 * `color--default` / `color--bg-default`
@@ -10,7 +27,7 @@
 * `color--white` / `color--bg-white`
 * `color--black` / `color--bg-black`
 
-## [Заголовки](/src/block/site/default/page-header/readme.md) 
+## [Заголовки](/src/block/site/default/page-header) 
 ##### Префикс `page-header__`
 ##### Классы:
 * `page-header__group` (контейнер-обертка блока)
