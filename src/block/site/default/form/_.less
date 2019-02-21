@@ -20,8 +20,10 @@
 		width: 100%;
 		padding-top: 10px;
 		&.is--btn{
-			text-align: center;	
 			padding-top: 20px;
+			&.is--center{
+				text-align: center;	
+			}
 		}
 		&.is--reviews{
 			padding-top: 30px;
@@ -190,6 +192,83 @@
 		&.is--agreement{
 			font-size: @input_t_fs - 4;
 			line-height: @input_t_lh - 6;
+		}
+	}
+	//file
+	&file{
+		position: relative;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		&.is--center{
+			justify-content: center;
+		}	
+		&-input{
+			position: absolute;
+			appearance: none;
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			clip: rect(0 0 0 0);
+		}
+		&-icon{
+			color: @file_icon;
+			display: inline-block;
+			min-width: @file_size;
+			width: @file_size;
+			height: @file_size + 8;
+			margin-bottom: 3px;
+			margin-right: 10px;	
+			svg{fill: currentColor;}			
+		}		
+		&-name{
+			line-height: @b-lh - 8;
+			color: @file_color;
+			border-bottom: 1px solid @file_border_color;
+			transition: @trs-site;
+			.form__file:hover &,
+			.form__file-input:focus + &{
+				color: @file_focus_color;
+				border-bottom-color: @file_focus_border_color;
+			}			
+		}	
+	}
+	//reset
+	&reset{
+		&{
+			.btn-clearfix();
+			display: flex;
+			align-items: flex-end;
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 8;
+		}
+		&-icon{
+			width: @reset_size;
+			height: @reset_size - 2;
+			margin-right: 5px;
+			display: block;
+			&-check{
+				transition: @trs-site;
+				fill: @reset_bg_color;
+				.form__reset:focus &,
+				.form__reset.is--active &,
+				.form__reset:hover &{
+					fill: @reset_focus_bg_color;
+				}
+			}
+		}
+		&-label{
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			transition: @trs-site;
+			color: @reset_color;
+			border-bottom-color: @reset_border_color;
+			.form__reset:focus &,
+			.form__reset.is--active &,
+			.form__reset:hover &{
+				color: @reset_focus_color;
+				border-bottom-color: @reset_focus_border_color;
+			}
 		}
 	}
 	//radio	
