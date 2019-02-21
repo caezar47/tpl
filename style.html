@@ -445,31 +445,7 @@
 </div>
 			</div>
 			<div class="form__cols cols  is--radio    ">
-				<div class="form__item        ">
-	<div class="form__label        ">
-		Период, <small>лет</small>
-	</div>  
-	<div class="form__radio-group        ">
-		<div class="form__radio-elem        ">
-			<label for="year1" class="form__radio        ">
-				<input type="radio" class="form__radio-input        " name="year[year]" id="year1" value="1" checked>
-				<div class="form__radio-btn        ">1</div>
-			</label>
-		</div>
-		<div class="form__radio-elem        ">
-			<label for="year2" class="form__radio        ">
-				<input type="radio" class="form__radio-input        " name="year[year]" id="year2" value="2">
-				<div class="form__radio-btn        ">2</div>
-			</label>
-		</div>
-		<div class="form__radio-elem        ">
-			<label for="year3" class="form__radio        ">
-				<input type="radio" class="form__radio-input        " name="year[year]" id="year3" value="3">
-				<div class="form__radio-btn        ">3</div>
-			</label>
-		</div>
-	</div>
-</div>
+				
 			</div>
 			<div class="form__cols cols  is--range    ">
 				<div class="form__item        ">
@@ -490,6 +466,97 @@
 	<textarea     class="form__control form-control validate[required]          is--textarea" id="comments[comments]" name="f[Сообщение]" placeholder="Сообщение"></textarea>
 </div>
 			</div>
+				<div class="cols form__cols    ">
+					<div class="form__item  is--switch        ">	
+	<label class="form__check        ">
+		<input type="checkbox" class="form__check-input        "   >
+		<span class="form__check-box        ">
+			<svg class="form__check-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.908 7.448c.47.44.507 1.193.085 1.682l-4.114 4.762c-.214.246-.516.39-.834.394a1.121 1.121 0 0 1-.844-.37l-2.172-2.382a1.226 1.226 0 0 1 .042-1.683 1.11 1.11 0 0 1 1.615.043l1.32 1.448 3.288-3.805a1.111 1.111 0 0 1 1.614-.089z"/>
+			</svg>
+		</span>
+		normal
+	</label>
+</div>
+				</div>
+				<div class="cols form__cols    ">
+					<div class="form__item  is--switch        ">	
+	<label class="form__check        ">
+		<input type="checkbox" class="form__check-input        " checked>
+		<span class="form__check-box        ">
+			<svg class="form__check-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.908 7.448c.47.44.507 1.193.085 1.682l-4.114 4.762c-.214.246-.516.39-.834.394a1.121 1.121 0 0 1-.844-.37l-2.172-2.382a1.226 1.226 0 0 1 .042-1.683 1.11 1.11 0 0 1 1.615.043l1.32 1.448 3.288-3.805a1.111 1.111 0 0 1 1.614-.089z"/>
+			</svg>
+		</span>
+		checked
+	</label>
+</div>
+				</div>
+				<div class="cols form__cols    ">
+					<div class="form__item  is--switch        ">	
+	<label class="form__check        ">
+		<input type="checkbox" class="form__check-input        " disabled>
+		<span class="form__check-box        ">
+			<svg class="form__check-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.908 7.448c.47.44.507 1.193.085 1.682l-4.114 4.762c-.214.246-.516.39-.834.394a1.121 1.121 0 0 1-.844-.37l-2.172-2.382a1.226 1.226 0 0 1 .042-1.683 1.11 1.11 0 0 1 1.615.043l1.32 1.448 3.288-3.805a1.111 1.111 0 0 1 1.614-.089z"/>
+			</svg>
+		</span>
+		disabled
+	</label>
+</div>
+				</div>
+				<div class="cols form__cols    ">
+					<div class="form__item  is--switch        ">	
+	<label class="form__check        ">
+		<input type="checkbox" class="form__check-input        " checked disabled>
+		<span class="form__check-box        ">
+			<svg class="form__check-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.908 7.448c.47.44.507 1.193.085 1.682l-4.114 4.762c-.214.246-.516.39-.834.394a1.121 1.121 0 0 1-.844-.37l-2.172-2.382a1.226 1.226 0 0 1 .042-1.683 1.11 1.11 0 0 1 1.615.043l1.32 1.448 3.288-3.805a1.111 1.111 0 0 1 1.614-.089z"/>
+			</svg>
+		</span>
+		checked disabled
+	</label>
+</div>
+				</div>
+				<div class="cols form__cols    ">
+					<div class="form__item  is--radio        ">
+	<label class="form__radio        ">
+		<input class="form__radio-input        " type="radio" id="normal" name="{{block_form_id}}[group]"   >
+		<span class="form__radio-box        ">
+			<svg class="form__radio-icon        " viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.908 7.448c.47.44.507 1.193.085 1.682l-4.114 4.762c-.214.246-.516.39-.834.394a1.121 1.121 0 0 1-.844-.37l-2.172-2.382a1.226 1.226 0 0 1 .042-1.683 1.11 1.11 0 0 1 1.615.043l1.32 1.448 3.288-3.805a1.111 1.111 0 0 1 1.614-.089z"/>
+			</svg>
+		</span>
+		Normal
+	</label>
+</div>	
+				</div>
+				<div class="cols form__cols    ">
+					<div class="form__item  is--radio        ">
+	<label class="form__radio        ">
+		<input class="form__radio-input        " type="radio" id="checked" name="{{block_form_id}}[group]" checked>
+		<span class="form__radio-box        ">
+			<svg class="form__radio-icon        " viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.908 7.448c.47.44.507 1.193.085 1.682l-4.114 4.762c-.214.246-.516.39-.834.394a1.121 1.121 0 0 1-.844-.37l-2.172-2.382a1.226 1.226 0 0 1 .042-1.683 1.11 1.11 0 0 1 1.615.043l1.32 1.448 3.288-3.805a1.111 1.111 0 0 1 1.614-.089z"/>
+			</svg>
+		</span>
+		Checked
+	</label>
+</div>	
+				</div>
+				<div class="cols form__cols    ">
+					<div class="form__item  is--radio        ">
+	<label class="form__radio        ">
+		<input class="form__radio-input        " type="radio" id="disabled" name="{{block_form_id}}[group]" disabled>
+		<span class="form__radio-box        ">
+			<svg class="form__radio-icon        " viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.908 7.448c.47.44.507 1.193.085 1.682l-4.114 4.762c-.214.246-.516.39-.834.394a1.121 1.121 0 0 1-.844-.37l-2.172-2.382a1.226 1.226 0 0 1 .042-1.683 1.11 1.11 0 0 1 1.615.043l1.32 1.448 3.288-3.805a1.111 1.111 0 0 1 1.614-.089z"/>
+			</svg>
+		</span>
+		Disabled
+	</label>
+</div>	
+				</div>	
 			<div class="form__cols cols  is--agreement    ">
 				<div class="form__item  is--agreement        ">
 	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">

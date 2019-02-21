@@ -262,23 +262,65 @@
 @form_error_lh 				: 	@b-lh - 6;
 @form_error_radius 			: 	0;
 
-//=== switch ===
-@switch_color				:	@b-color;
-@switch_fs					:	@b-fs - 4;
-@switch_lh					:	@b-lh - 6;
-@switch_size				:	16px;
-@switch_border_width		:	2px;
-@switch_border_color		:	@success;
-@switch_bg_color			:	@white;
+
+//=== radio ===
+@radio_color 				: 	@default;
+@radio_size 				: 	20px;
+@radio_gutter 				: 	4px;
+@radio_bg 					: 	@white;
+@radio_border_width 		: 	1px;
+@radio_border_color 		: 	@default;
+@radio_icon 				: 	transparent;
+@radio_radius 				: 	50%;
+
+//= disabled =
+@radio_disabled_icon		:	@white;
+@radio_disabled_bg			: 	fadeout(@default, 30%);
+
 //= focus =
-@switch_focus_border_color	:	@primary;
+@radio_focus_color 			: 	@primary;
+@radio_focus_bg 			: 	@primary;
+@radio_focus_shadow	 		:	@success;
+@radio_focus_border_color	: 	@primary;
+@radio_focus_icon 			: 	@white;
+
+//=== check ===
+@check_radius 				: 	2px;
+@check_color				:	@default;
+@check_fs					:	@b-fs;
+@check_lh					:	@b-lh;
+@check_size					:	20px;
+@check_bg					:	@input_bg;
+@check_border_color			:	@default;
+@check_border_width			:	1px;
+@check_icon					:	transparent;
+
+//= focus =
+@check_focus_border_color	:	@primary;
+@check_focus_shadow	 		:	@success;
+@check_focus_bg				:	@white;
+@check_focus_icon			:	@primary;
+
+//= disabled =
+@check_disabled_bg			:	fadeout(@default, 30%);
+@check_disabled_icon		:	@white;
 
 //== white ==
-@switch_w_color				:	@white;
-@switch_w_border_color		:	@white;
-@switch_w_bg_color			:	fadeout(@white, 100%);
+@check_w_color				:	@white;
+@check_w_bg					:	transparent;
+@check_w_border_color 		: 	@white;
+@check_w_icon				:	transparent;
 //= focus =
-@switch_w_focus_border_color:	@primary;
+@check_w_focus_bg 			: 	@primary;
+@check_w_focus_border_color : 	@primary;
+@check_w_focus_shadow	 	:	@white;
+@check_w_focus_icon			:	@white;
+
+//= disabled =
+@check_w_disabled_bg 		: 	fadeout(@white, 30%);
+@check_w_disabled_border_color : 	fadeout(@white, 30%);
+@check_w_disabled_icon 		: 	@primary;
+
 //=== search ===
 @search_border 				:	1px;
 @search_radius				:	22px;
