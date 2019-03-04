@@ -19,11 +19,9 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),					// переименование файлов
 	uglify = require('gulp-uglify'),					// сжатие js
 	watch = require('gulp-watch'),						// наблюдение за изменением файловой системы
-	tinypng = require('gulp-tinypng-compress');			// сжатие изображений через https://tinypng.com
 	cache = require('gulp-cache'),						// кеширование
 	plumber = require('gulp-plumber'),					// отлов ошибок
 	pagebuilder2 = require('gulp-pagebuilder2');		// умный инклуд html с поддержкой вложенности и передачей параметров
-	fontgen = require('gulp-fontgen');					// конвертация шрифтов
 
 	//svg sprite
 	svgSprite = require('gulp-svg-sprite'),				// создание спрайта	
@@ -31,7 +29,16 @@ var gulp = require('gulp'),
 	cheerio = require('gulp-cheerio'),					// удаление лишних атрибутов из svg
 	replace = require('gulp-replace');					// фиксинг багов
 
-	//imagemin = require('gulp-imagemin'),				// сжатие изображений
+	imagemin = require('gulp-imagemin'),				// сжатие изображений
+	imageminPngquant = require('imagemin-pngquant'),	// сжатие изображений
+	imageminJpegRecompress = require('imagemin-jpeg-recompress'),	// сжатие изображений
+	webp = require("imagemin-webp");						// конвертация изображений в webp 
+	extReplace = require("gulp-ext-replace"); 			//изменение расширения файла
+
+	webpHTML = require('gulp-webp-html');				// вставка webp изображений в html 
+	//tinypng = require('gulp-tinypng-compress');			// сжатие изображений через https://tinypng.com
+	//fontgen = require('gulp-fontgen');					// конвертация шрифтов
+	
 	//realFavicon = require ('gulp-real-favicon');		// создание кросплатформенного favicon	
 	//mmq = require('gulp-merge-media-queries');		// склейка медиа запросов
 	//ttf2woff = require('gulp-ttf2woff');				// конвертация шрифтов из ttf в woff 
@@ -52,8 +59,8 @@ var path = {
 		css : root + '/css',
 		js : root + '/js',
 		img : root + '/img',
-		fonts : root + '/fonts',
 		svg : root + '/img/svg',
+		//fonts : root + '/fonts',
 		//favicon : root + '/favicon',
 	},
 	src : {
@@ -62,10 +69,10 @@ var path = {
 		css : src + '/css',
 		js : src + '/js',
 		img : src + '/img',
-		fonts : src + '/fonts',
 		svg : src + '/svg',
-		//favicon : src + '/favicon',
 		_ : src + '/_',
+		//fonts : src + '/fonts',
+		//favicon : src + '/favicon',
 	},
 	block : {
 		root : root + '/src/block',
@@ -91,11 +98,13 @@ gulp.task('dev',
 	'dev:js',
 	'dev:block:less',
 	'dev:css',
-	//'dev:css2',
 	'dev:email',
 	'dev:img',
-	'dev:fonts',
+	'dev:img:webp',
 	'dev:svg',
+	'dev:readme.md',
+	//'dev:css2',
+	//'dev:fonts',
 	//'dev:favicon',
 ]);
 
@@ -108,6 +117,7 @@ gulp.task('server', function(){
 		}
 	});
 	gulp.watch(path.block.root + '/**/.html', ['dev:html']);
+	gulp.watch(path.block.root + '/**/readme.md', ['dev:readme.md']);
 	gulp.watch(path.block.root + '/**/*.html', ['dev:html']);
 	gulp.watch(path.src.html + '/**/*.html', ['dev:html']);
 	gulp.watch(path.src.html + '/**/*.email.html', ['dev:email']);
@@ -131,7 +141,7 @@ gulp.task('server', function(){
 	
 	
 	gulp.watch(path.src.css + '/**/*.less', ['dev:css','dev:email']);
-	gulp.watch(path.block.root + '/**/.less', ['dev:block:less']);
+	//gulp.watch(path.block.root + '/**/.less', ['dev:block:less']);
 	gulp.watch(path.block.root + '/**/*.less', ['dev:block:less']);
 	
 	//gulp.watch(path.src.css + '/**/*.scss', ['dev:css2']);
@@ -141,6 +151,7 @@ gulp.task('server', function(){
 	//gulp.watch(path.src._ + '/concat.block.scss', ['dev:css2']);
 	
 	gulp.watch(path.src.img + '/**/*', ['dev:img']);
+	gulp.watch(path.src.img + '/**/*', ['dev:img:webp']);
 	gulp.watch(path.src.fonts + '/**/*', ['dev:fonts']);
 	gulp.watch(path.src.svg + '/**/*', ['dev:svg']);
 	//gulp.watch(path.src.favicon + '/**/*', ['dev:favicon']);
@@ -151,6 +162,7 @@ gulp.task('dev:html', function(){
 	return gulp.src(path.src.html + '/**/*.html')
 		.pipe(plumber())
 		.pipe(pagebuilder2(path.build.root, fish))
+		.pipe(webpHTML())
 		.pipe(gulp.dest(path.build.html))
 
 		//.pipe(htmlhint())
@@ -275,7 +287,6 @@ gulp.task('dev:changeClass:js', function(){
 		.pipe(gulp.dest(path.src._))
 	;
 });
-
 gulp.task('dev:css', function(){
 	return gulp.src(path.src.css + '/*.less')
 		.pipe(plumber())
@@ -285,21 +296,81 @@ gulp.task('dev:css', function(){
 			cascade: true,
 		}))
 		.pipe(cleanCSS())
+		
 		//.pipe(mmq({log: true}))
 		//.pipe(minifyCss())
-
 		/*
 		uncss
 		.pipe(uncss({
             html: [path.build.html + '/*.html']
-        }))
-        
+        }))      
         */
         //.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({stream : true,}))
 	;
 });
+gulp.task('dev:block:less', function(){
+	return gulp.src(path.block.root + '/**/*.less')
+	//return gulp.src(path.block.root + '/**/.less')
+		.pipe(plumber())
+		//.pipe(pagebuilder2(path.build.root, fish))
+		.pipe(concat('concat.block.less'))
+		.pipe(gulp.dest(path.src._))
+		//.pipe(reload({stream : true,}))
+	;
+});
+gulp.task('dev:readme.md', function(){
+	return gulp.src(path.block.root + '/**/readme.md')
+		.pipe(plumber())
+		.pipe(concat('concat.readme.md'))
+		.pipe(rename('readme.md'))
+		.pipe(gulp.dest(path.build.html))
+		.pipe(reload({stream : true,}))
+	;
+});
+gulp.task('dev:email', function(){
+	return gulp.src(path.src.html + '/**/*.email.html')
+		.pipe(plumber())
+		.pipe(pagebuilder2(path.build.root, fish))
+		.pipe(inlineCss({
+			applyStyleTags: true,
+			applyLinkTags: true,
+			removeStyleTags: true,
+			removeLinkTags: true,
+		}))
+		.pipe(gulp.dest(path.build.html))
+		.pipe(reload({stream : true,}))
+	;
+});
+gulp.task('dev:img:webp', function () {
+    gulp.src(path.src.img + '/**/*.{png,jpg,jpeg}')
+    	.pipe(plumber())
+	    .pipe(imagemin([
+	      webp({
+	        quality: 75
+	      })
+	    ]))
+    	.pipe(extReplace(".webp"))
+        .pipe(gulp.dest(path.build.img));
+});
+gulp.task('dev:img', function () {
+	return gulp.src(path.src.img + '/**/*.{png,jpg,jpeg}')
+	    .pipe(plumber())
+	    .pipe(gulp.dest(path.build.img))
+	    .pipe(imagemin([
+	      imageminJpegRecompress({
+	        progressive: true,
+	        max: 80,
+	        min: 70
+	      }),
+	      imageminPngquant({
+	      	quality: [0.7, 0.8]
+	      })
+	    ]))
+	    .pipe(gulp.dest(path.build.img));
+});
+
 
 // gulp.task('dev:css2', function(){
 // 	return gulp.src(path.src.css + '/*.scss')
@@ -316,15 +387,6 @@ gulp.task('dev:css', function(){
 // 	;
 // });
 
-gulp.task('dev:block:less', function(){
-	return gulp.src(path.block.root + '/**/*.less')
-		.pipe(plumber())
-		//.pipe(pagebuilder2(path.build.root, fish))
-		.pipe(concat('concat.block.less'))
-		.pipe(gulp.dest(path.src._))
-		//.pipe(reload({stream : true,}))
-	;
-});
 // gulp.task('dev:block:sass', function(){
 // 	return gulp.src(path.block.root + '/**/.scss')
 // 		.pipe(plumber())
@@ -333,40 +395,25 @@ gulp.task('dev:block:less', function(){
 // 		.pipe(gulp.dest(path.src._))
 // 		//.pipe(reload({stream : true,}))
 // 	;
+// }); 
+
+// gulp.task('dev:img', function () {
+//     gulp.src(path.src.img + '/**/*.{png,jpg,jpeg}')
+//     	.pipe(plumber())
+//         .pipe(tinypng({
+//             key: 'D1yA1guKp9tcg4ShSoqOp21ctuI89G6S', //tN4hKBeysODqiZ5yNUvMcvINQn0KdEej
+//             sigFile: 'images/.tinypng-sigs',
+//             log: true
+//         }))
+//         .pipe(gulp.dest(path.build.img));
 // });
-gulp.task('dev:email', function(){
-	return gulp.src(path.src.html + '/**/*.email.html')
-		.pipe(plumber())
-		.pipe(pagebuilder2(path.build.root, fish))
-		.pipe(inlineCss({
-			applyStyleTags: true,
-			applyLinkTags: true,
-			removeStyleTags: true,
-			removeLinkTags: true,
-		}))
-		.pipe(gulp.dest(path.build.html))
-		.pipe(reload({stream : true,}))
-	;
-});
 
- 
-gulp.task('dev:img', function () {
-    gulp.src(path.src.img + '/**/*.{png,jpg,jpeg}')
-    	.pipe(plumber())
-        .pipe(tinypng({
-            key: 'D1yA1guKp9tcg4ShSoqOp21ctuI89G6S', //tN4hKBeysODqiZ5yNUvMcvINQn0KdEej
-            sigFile: 'images/.tinypng-sigs',
-            log: true
-        }))
-        .pipe(gulp.dest(path.build.img));
-});
-
-gulp.task('dev:fonts', function() {
-  	return gulp
-  			.src(path.src.fonts + "/*.{ttf,otf}")
-  			.pipe(plumber())
-    		.pipe(fontgen({dest: path.build.fonts}))
-});
+// gulp.task('dev:fonts', function() {
+//   	return gulp
+//   			.src(path.src.fonts + "/*.{ttf,otf}")
+//   			.pipe(plumber())
+//     		.pipe(fontgen({dest: path.build.fonts}))
+// });
 
 
 //
