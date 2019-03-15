@@ -15,6 +15,24 @@
 			height: 100vh;
 		}
 	}
+	&slick{
+		position: absolute!important;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		z-index: 1;
+		*{
+			width: 100%;
+			height: 100%;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 	&container{
 		position: relative;
 		z-index: 2;
@@ -27,7 +45,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: fadeout(@white, 40%);
+		//background-color: fadeout(@white, 40%);
 		@media @media-point-screen-lg {	
 			position: absolute;
 			top: 53%;
@@ -45,7 +63,7 @@
 	&heading{
 		font-family: @b-ff-2;
 		text-align: center;
-		color: @black;
+		color: @white;
 		.calcFontSize(26, 34, 320, 767);
 		.calcLineHeight(30, 38, 320, 767);
 		font-weight: 400;
@@ -61,6 +79,7 @@
 		text-align: center;
 		.heading4();
 		margin-bottom: 35px;
+		color: @white;
 		@media @media-point-smart {
 			br{display: none;}
 		}	

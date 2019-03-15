@@ -6,24 +6,23 @@ $(function() {
 	//var CMS__TPL_PATH = '/tpl';  
 	var CMS__TPL_PATH = '';  
 	//local
-	var prevArrow = '<button type="button" class="slick-btn  is--prev"><span class="sr-only">Предыдущий слайд</span><svg class="icon-svg icon-icon-prev" role="img"><use xlink:href="'+ CMS__TPL_PATH +'/img/svg/sprite.svg#icon-prev"></use></svg></button>';
-	var nextArrow = '<button type="button" class="slick-btn  is--next"><span class="sr-only">Следующий слайд</span><svg class="icon-svg icon-icon-next" role="img"><use xlink:href="'+ CMS__TPL_PATH +'/img/svg/sprite.svg#icon-next"></use></svg></button>';	
+	var prevArrow = '<button type="button" class="slick-btn  is--prev"><span class="sr-only">Предыдущий слайд</span></button>';
+	var nextArrow = '<button type="button" class="slick-btn  is--next"><span class="sr-only">Следующий слайд</span></button>';	
 	
 	$('.slick-cloned .content-block__preview').removeAttr('data-fancybox');
 	
-	/*header.slick({
+	header.slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		infinite: true,
-		arrows: true,
+		arrows: false,
 		dots: false,
-		//infinite: true, 
 		autoplay: true,
   		autoplaySpeed: 4000,
-		prevArrow: prevArrow,
-		nextArrow: nextArrow,
+		//prevArrow: prevArrow,
+		//nextArrow: nextArrow,
 		fade: true
-	});*/
+	});
 	gallery.slick({
 		slidesToShow: 4,
 		slidesToScroll: 4,

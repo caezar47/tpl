@@ -15,6 +15,9 @@
 				margin-bottom: ~"calc(@{slider_dots_bottom} + (@{slider_dots_width} * 2) + 15px)";
 			}
 		}
+		&[data-slider-slick="slick-header"] {
+			padding: 0;
+		}
 	}
 	&-list {
 		position: relative;
@@ -110,17 +113,37 @@
 		border-style: solid;
 		border-color: @slider_btn_border_color;
 		border-radius: @slider_btn_radius;
-		svg{display: block;}
+		background-position: center;
+		background-repeat: no-repeat;
+		&.is--prev{
+			left: 0;
+			background-image: url('data:image/svg+xml,%3Csvg width="12" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M11.4142.5858c.7811.781.7811 2.0474 0 2.8284L4.8284 10l6.5858 6.5858c.7811.781.7811 2.0474 0 2.8284-.781.7811-2.0474.7811-2.8284 0l-8-8c-.781-.781-.781-2.0474 0-2.8284l8-8c.781-.781 2.0474-.781 2.8284 0z" fill="%23000"/%3E%3C/svg%3E');
+			[data-slider-slick="slick-header"] &{
+				left: 5px;
+			}
+		}
+		&.is--next{
+			right: 0;
+			background-image: url('data:image/svg+xml,%3Csvg width="12" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M.5858.5858c-.781.781-.781 2.0474 0 2.8284L7.1716 10 .5858 16.5858c-.781.781-.781 2.0474 0 2.8284.781.7811 2.0474.7811 2.8284 0l8-8c.7811-.781.7811-2.0474 0-2.8284l-8-8c-.781-.781-2.0474-.781-2.8284 0z" fill="%23000"/%3E%3C/svg%3E');
+			[data-slider-slick="slick-header"] &{
+				right: 5px;
+			}
+		}
 		&:hover{
 			background-color: @slider_btn_bg_hover;
 			border-color: @slider_btn_border_color_hover;
 			color: @slider_btn_color_hover;
 		}
+
 		&.is--prev{
-			left: 0;
+			&:hover{
+				background-image: url('data:image/svg+xml,%3Csvg width="12" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M11.4142.5858c.7811.781.7811 2.0474 0 2.8284L4.8284 10l6.5858 6.5858c.7811.781.7811 2.0474 0 2.8284-.781.7811-2.0474.7811-2.8284 0l-8-8c-.781-.781-.781-2.0474 0-2.8284l8-8c.781-.781 2.0474-.781 2.8284 0z" fill="%23fff"/%3E%3C/svg%3E');
+			}
 		}
 		&.is--next{
-			right: 0;
+			&:hover{
+				background-image: url('data:image/svg+xml,%3Csvg width="12" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M.5858.5858c-.781.781-.781 2.0474 0 2.8284L7.1716 10 .5858 16.5858c-.781.781-.781 2.0474 0 2.8284.781.7811 2.0474.7811 2.8284 0l8-8c.7811-.781.7811-2.0474 0-2.8284l-8-8c-.781-.781-2.0474-.781-2.8284 0z" fill="%23fff"/%3E%3C/svg%3E');
+			}
 		}
 	}
 	&-dots {

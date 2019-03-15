@@ -7,7 +7,7 @@
 			description=" "
 		]] 		
 	</head>
-	<body class="is--index-page"> 
+	<body class="is--index-page">
 		[[azbntple 
 			tpl="/src/block/site/default/navbar/navbar.html"
 			navbar_prefix="navbar__"
@@ -24,18 +24,27 @@
 		[[azbntple  
 			tpl="/src/block/site/page/index-adv.html"
 			content_prefix="content-block__"
-			content_mod="is--adv-index"
+			content_mod="is--index-adv"
 			content_id="adv-block"
 		]]
 		[[azbntple  
 			tpl="/src/block/site/page/index-services.html"
 			content_prefix="content-block__"  
-			content_mod="is--services-index"
+			content_mod="is--index-services"
 			content_id="services-block"
 			content_bg="{{url-path-img}}/temp/bg-index-services.jpg"
 			block_heading_mod="is--index-heading"
 			block_heading_level="h2"
 			block_heading="Наши услуги"
+		]]
+		[[azbntple  
+			tpl="/src/block/site/page/index-about.html"
+			content_prefix="content-block__"  
+			content_mod="is--index-about"
+			content_id="services-block"
+			block_heading_mod="is--index-heading"
+			block_heading_level="h2"
+			block_heading="О компании"
 		]]	
 		[[azbntple  
 			tpl="/src/block/site/page/index-portfolio.html"
@@ -44,7 +53,7 @@
 			content_id="portfolio-block"
 			block_heading_mod="is--index-heading"
 			block_heading_level="h2"
-			block_heading="Гарантия по договору, а не на словах"
+			block_heading="Наши работы"
 		]]		
 		[[azbntple 
 			tpl="/src/block/site/default/footer/footer.html"
