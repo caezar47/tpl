@@ -41,6 +41,13 @@
 		"sitemap":"/sitemap.html",
 		"style":"/style.html",
 		"agreement":"/agreement.html"
+	},
+	"prefix":{
+		"heading":"page-header__",
+		"form":"form__",
+		"btn":"btn__",
+		"link":"link__",
+		"btn-icon":"btn-icon__"
 	},	                           
 	"url-path-css":"/css",
 	"url-path-img":"/img",

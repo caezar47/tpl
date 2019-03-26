@@ -357,11 +357,16 @@
 <h4 class="content-block__heading">Кнопки и ссылки</h4>
 <div style="margin-bottom: 20px;">		
 	<a href="/" class="btn__item    ">
-	<span class="btn__name">Предварительный рассчет</span>
+	<span class="btn__name">На главную</span>
 </a>  
 </div>
 <div style="margin-bottom: 20px;">	 	
-	<button type="button" class="btn__item  is--invers" data-toggle="modal" data-target="#modal-message">
+	<button type="button" class="btn__item    " data-toggle="modal" data-target="#modal-form" data-modal-heading="Заказать звонок" data-modal-heading-small="Мы перезвоним вам в ближайшее время" data-btn-heading="Отправить">
+	<span class="btn__name">Заказать звонок</span>
+</button>	
+</div>
+<div style="margin-bottom: 20px;">	 	
+	<button type="button" class="btn__item  is--invers" data-toggle="modal" data-target="#modal-form" data-modal-heading="Заголовок" data-modal-heading-small="Подзаголовок" data-btn-heading="Имя кнопки">
 	<span class="btn__name">Модальное окно</span>
 </button>	
 </div>
@@ -371,16 +376,17 @@
 </a>  
 </div>
 <div style="margin-bottom: 20px;">	
-	<a href="##" class="btn-link__item    ">
-	<span class="btn-link__name">Подробнее</span>
+	<a href="##" class="link__item    ">
+	<span class="link__name">Подробнее</span>
 </a>  
 </div>
-
 <div style="margin-bottom: 20px;">	
-	
-</div>
-<div>
-		
+	<a href="##" class="btn-icon__item    ">
+	<span class="btn-icon__icon    "><svg class="icon-svg icon-contacts-tel" role="img">
+	<use xlink:href="/img/svg/sprite.svg#contacts-tel"></use>
+</svg></span>
+	<span class="btn-icon__name    ">Позвонить</span>
+</a>
 </div>
 		</div>
 		<div class="content-block__elem    ">
@@ -595,15 +601,13 @@
 </div>
 <div style="margin-bottom: 100px; max-width: 785px;">
 	<div class="form__block    "  >
-	<div class="page-header__group  is--h4">
 	<div class="page-header__panel  is--h4">
-	<h4 class="page-header__heading  is--h4"><span>Form default</span></h4>	
-	<div class="page-header__heading-small  is--h4">Свяжитесь с нами</div>		
-</div>
-</div>
+		<h4 data-modal-heading class="page-header__heading  is--h4">Form default</h4>	
+		<div data-modal-heading-small class="page-header__heading-small  is--h4">Свяжитесь с нами</div>	
+	</div>
 	<form action="#" class="form__panel    "  >
 		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
-		<input type="hidden" name="f[Форма: Form default]">
+		<input type="hidden" name="f[Форма: Form default]" data-form-heading>
 		<div class="form__row row    ">
 			<div class="form__cols cols  is--name    ">
 				<div class="form__item      is--name">
@@ -621,9 +625,8 @@
 </div>
 			</div>
 			<div class="form__cols cols  is--btn    ">
-				<button type="submit" class="btn__item    ">
-	<span class="btn__name">Отправить</span>
-</button>				
+				<button type="submit"
+				data-btn-heading class="btn__item    ">Отправить</button>			
 			</div>
 			<div class="form__cols cols  is--agreement    ">
 				<div class="form__item  is--agreement        ">
@@ -852,7 +855,7 @@
 		<div class="grid__cols">	
 			<a href="/services-card.html" class="card-item__card  is--services">	
 	<div class="card-item__preview  is--services">	
-		<picture><source srcset="http://via.placeholder.com/500x310" type="image/webp"><img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive">
 	</div>
 	<h5 class="card-item__heading  is--services">Карточка</h5>
 	<div class="card-item__bg  is--services">
@@ -863,7 +866,7 @@
 		<div class="grid__cols">
 			<a href="/services-card.html" class="card-item__card  is--services">	
 	<div class="card-item__preview  is--services">	
-		<picture><source srcset="http://via.placeholder.com/500x310" type="image/webp"><img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive">
 	</div>
 	<h5 class="card-item__heading  is--services">Карточка</h5>
 	<div class="card-item__bg  is--services">
@@ -874,7 +877,7 @@
 		<div class="grid__cols">	
 			<a href="/services-card.html" class="card-item__card  is--services">	
 	<div class="card-item__preview  is--services">	
-		<picture><source srcset="http://via.placeholder.com/500x310" type="image/webp"><img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive">
 	</div>
 	<h5 class="card-item__heading  is--services">Карточка</h5>
 	<div class="card-item__bg  is--services">
@@ -885,7 +888,7 @@
 		<div class="grid__cols">	
 			<a href="/services-card.html" class="card-item__card  is--services">	
 	<div class="card-item__preview  is--services">	
-		<picture><source srcset="http://via.placeholder.com/500x310" type="image/webp"><img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive">
 	</div>
 	<h5 class="card-item__heading  is--services">Карточка</h5>
 	<div class="card-item__bg  is--services">
@@ -896,7 +899,7 @@
 		<div class="grid__cols">	
 			<a href="/services-card.html" class="card-item__card  is--services">	
 	<div class="card-item__preview  is--services">	
-		<picture><source srcset="http://via.placeholder.com/500x310" type="image/webp"><img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive">
 	</div>
 	<h5 class="card-item__heading  is--services">Карточка</h5>
 	<div class="card-item__bg  is--services">
@@ -907,7 +910,7 @@
 		<div class="grid__cols">	
 			<a href="/services-card.html" class="card-item__card  is--services">	
 	<div class="card-item__preview  is--services">	
-		<picture><source srcset="http://via.placeholder.com/500x310" type="image/webp"><img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/500x310" alt="Карточка" class="img-responsive">
 	</div>
 	<h5 class="card-item__heading  is--services">Карточка</h5>
 	<div class="card-item__bg  is--services">
@@ -923,7 +926,7 @@
 		<div class="grid__cols">
 			<a href="/portfolio-card.html" class="card-item__card  is--portfolio">	
 	<div class="card-item__preview  is--portfolio">	
-		<picture><source srcset="http://via.placeholder.com/400x540" type="image/webp"><img src="http://via.placeholder.com/400x540" alt="Карточка" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/400x540" alt="Карточка" class="img-responsive">
 	</div>
 	<h5 class="card-item__heading  is--portfolio">Карточка</h5>
 	<div class="card-item__bg  is--portfolio">
@@ -934,7 +937,7 @@
 		<div class="grid__cols">
 			<a href="/portfolio-card.html" class="card-item__card  is--portfolio">	
 	<div class="card-item__preview  is--portfolio">	
-		<picture><source srcset="http://via.placeholder.com/400x540" type="image/webp"><img src="http://via.placeholder.com/400x540" alt="Карточка" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/400x540" alt="Карточка" class="img-responsive">
 	</div>
 	<h5 class="card-item__heading  is--portfolio">Карточка</h5>
 	<div class="card-item__bg  is--portfolio">
@@ -945,7 +948,7 @@
 		<div class="grid__cols">
 			<a href="/portfolio-card.html" class="card-item__card  is--portfolio">	
 	<div class="card-item__preview  is--portfolio">	
-		<picture><source srcset="http://via.placeholder.com/400x540" type="image/webp"><img src="http://via.placeholder.com/400x540" alt="Карточка" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/400x540" alt="Карточка" class="img-responsive">
 	</div>
 	<h5 class="card-item__heading  is--portfolio">Карточка</h5>
 	<div class="card-item__bg  is--portfolio">
@@ -956,7 +959,7 @@
 		<div class="grid__cols">
 			<a href="/portfolio-card.html" class="card-item__card  is--portfolio">	
 	<div class="card-item__preview  is--portfolio">	
-		<picture><source srcset="http://via.placeholder.com/400x540" type="image/webp"><img src="http://via.placeholder.com/400x540" alt="Карточка" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/400x540" alt="Карточка" class="img-responsive">
 	</div>
 	<h5 class="card-item__heading  is--portfolio">Карточка</h5>
 	<div class="card-item__bg  is--portfolio">
@@ -972,7 +975,7 @@
 		<div class="content-block__slick-item  is--gallery">
 			<div class="card-item__card  is--gallery">
 	<a href="/img/temp/card-gallery-item1.jpg" data-fancybox="gallery" class="card-item__preview  is--gallery">
-		<picture><source srcset="http://via.placeholder.com/400x400" type="image/webp"><img src="http://via.placeholder.com/400x400" alt="" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/400x400" alt="" class="img-responsive">
 		<div class="card-item__bg  is--gallery">
 			<div class="card-item__view  is--gallery">
 				<svg class="icon-svg icon-view" role="img">
@@ -986,7 +989,7 @@
 		<div class="content-block__slick-item  is--gallery">
 			<div class="card-item__card  is--gallery">
 	<a href="/img/temp/card-gallery-item1.jpg" data-fancybox="gallery" class="card-item__preview  is--gallery">
-		<picture><source srcset="http://via.placeholder.com/400x400" type="image/webp"><img src="http://via.placeholder.com/400x400" alt="" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/400x400" alt="" class="img-responsive">
 		<div class="card-item__bg  is--gallery">
 			<div class="card-item__view  is--gallery">
 				<svg class="icon-svg icon-view" role="img">
@@ -1000,7 +1003,7 @@
 		<div class="content-block__slick-item  is--gallery">
 			<div class="card-item__card  is--gallery">
 	<a href="/img/temp/card-gallery-item1.jpg" data-fancybox="gallery" class="card-item__preview  is--gallery">
-		<picture><source srcset="http://via.placeholder.com/400x400" type="image/webp"><img src="http://via.placeholder.com/400x400" alt="" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/400x400" alt="" class="img-responsive">
 		<div class="card-item__bg  is--gallery">
 			<div class="card-item__view  is--gallery">
 				<svg class="icon-svg icon-view" role="img">
@@ -1014,7 +1017,7 @@
 		<div class="content-block__slick-item  is--gallery">
 			<div class="card-item__card  is--gallery">
 	<a href="/img/temp/card-gallery-item1.jpg" data-fancybox="gallery" class="card-item__preview  is--gallery">
-		<picture><source srcset="http://via.placeholder.com/400x400" type="image/webp"><img src="http://via.placeholder.com/400x400" alt="" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/400x400" alt="" class="img-responsive">
 		<div class="card-item__bg  is--gallery">
 			<div class="card-item__view  is--gallery">
 				<svg class="icon-svg icon-view" role="img">
@@ -1028,7 +1031,7 @@
 		<div class="content-block__slick-item  is--gallery">
 			<div class="card-item__card  is--gallery">
 	<a href="/img/temp/card-gallery-item1.jpg" data-fancybox="gallery" class="card-item__preview  is--gallery">
-		<picture><source srcset="http://via.placeholder.com/400x400" type="image/webp"><img src="http://via.placeholder.com/400x400" alt="" class="img-responsive"></picture>
+		<img src="http://via.placeholder.com/400x400" alt="" class="img-responsive">
 		<div class="card-item__bg  is--gallery">
 			<div class="card-item__view  is--gallery">
 				<svg class="icon-svg icon-view" role="img">
@@ -1049,7 +1052,7 @@
 	<div class="card-item__row row  is--wrap  is--news">
 		<div class="card-item__cols cols  is--news  is--preview">
 			<a href="{{block_link}}" class="card-item__preview  is--news">
-				<picture><source srcset="http://via.placeholder.com/500x265" type="image/webp"><img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию"></picture>
+				<img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию">
 				<div class="card-item__bg  is--news">
 					<div class="card-item__view  is--news">
 						<svg class="icon-svg icon-view" role="img">
@@ -1079,7 +1082,7 @@
 	<div class="card-item__row row  is--wrap  is--news">
 		<div class="card-item__cols cols  is--news  is--preview">
 			<a href="{{block_link}}" class="card-item__preview  is--news">
-				<picture><source srcset="http://via.placeholder.com/500x265" type="image/webp"><img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию"></picture>
+				<img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию">
 				<div class="card-item__bg  is--news">
 					<div class="card-item__view  is--news">
 						<svg class="icon-svg icon-view" role="img">
@@ -1109,7 +1112,7 @@
 	<div class="card-item__row row  is--wrap  is--news">
 		<div class="card-item__cols cols  is--news  is--preview">
 			<a href="{{block_link}}" class="card-item__preview  is--news">
-				<picture><source srcset="http://via.placeholder.com/500x265" type="image/webp"><img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию"></picture>
+				<img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию">
 				<div class="card-item__bg  is--news">
 					<div class="card-item__view  is--news">
 						<svg class="icon-svg icon-view" role="img">
@@ -1139,7 +1142,7 @@
 	<div class="card-item__row row  is--wrap  is--news">
 		<div class="card-item__cols cols  is--news  is--preview">
 			<a href="{{block_link}}" class="card-item__preview  is--news">
-				<picture><source srcset="http://via.placeholder.com/500x265" type="image/webp"><img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию"></picture>
+				<img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию">
 				<div class="card-item__bg  is--news">
 					<div class="card-item__view  is--news">
 						<svg class="icon-svg icon-view" role="img">
@@ -1169,7 +1172,7 @@
 	<div class="card-item__row row  is--wrap  is--news">
 		<div class="card-item__cols cols  is--news  is--preview">
 			<a href="{{block_link}}" class="card-item__preview  is--news">
-				<picture><source srcset="http://via.placeholder.com/500x265" type="image/webp"><img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию"></picture>
+				<img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию">
 				<div class="card-item__bg  is--news">
 					<div class="card-item__view  is--news">
 						<svg class="icon-svg icon-view" role="img">
@@ -1199,7 +1202,7 @@
 	<div class="card-item__row row  is--wrap  is--news">
 		<div class="card-item__cols cols  is--news  is--preview">
 			<a href="{{block_link}}" class="card-item__preview  is--news">
-				<picture><source srcset="http://via.placeholder.com/500x265" type="image/webp"><img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию"></picture>
+				<img src="http://via.placeholder.com/500x265" alt="Остекляем балкон и лоджию">
 				<div class="card-item__bg  is--news">
 					<div class="card-item__view  is--news">
 						<svg class="icon-svg icon-view" role="img">
@@ -1363,7 +1366,7 @@
 		</div>
 	</div>
 </div>
-<div class="modal__block  modals  fade    " id="modal-defaul-form" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal__block  modals  fade    " id="modal-form" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog    ">
 		<div class="modal__body    " >
 			<button type="button" class="modal__btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
@@ -1373,15 +1376,13 @@
 			</button>
 			<div class="modal__content    ">
 				<div class="form__block    "  >
-	<div class="page-header__group  is--h4  align--center">
 	<div class="page-header__panel  is--h4  align--center">
-	<h4 class="page-header__heading  is--h4  align--center"><span>Рассчитать стоимость</span></h4>	
-	<div class="page-header__heading-small  is--h4  align--center">Мы перезвоним вам в ближайшее время</div>		
-</div>
-</div>
+		<h4 data-modal-heading class="page-header__heading  is--h4  align--center">Рассчитать стоимость</h4>	
+		<div data-modal-heading-small class="page-header__heading-small  is--h4  align--center">Мы перезвоним вам в ближайшее время</div>	
+	</div>
 	<form action="#" class="form__panel    "  >
 		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
-		<input type="hidden" name="f[Форма: Рассчитать стоимость]">
+		<input type="hidden" name="f[Форма: Рассчитать стоимость]" data-form-heading>
 		<div class="form__row row    ">
 			<div class="form__cols cols  is--name    ">
 				<div class="form__item      is--name">
@@ -1399,9 +1400,8 @@
 </div>
 			</div>
 			<div class="form__cols cols  is--btn    ">
-				<button type="submit" class="btn__item    ">
-	<span class="btn__name">Отправить заявку</span>
-</button>				
+				<button type="submit"
+				data-btn-heading class="btn__item    ">Отправить заявку</button>			
 			</div>
 			<div class="form__cols cols  is--agreement    ">
 				<div class="form__item  is--agreement        ">
